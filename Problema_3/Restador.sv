@@ -1,5 +1,10 @@
-module Restador(input logic a, b, output logic z);
+module Restador(
+	input logic a, 
+	input logic b, 
+	input logic cin, 
+	output logic d, 
+	output logic bo
+);
 
-assign z = a & b;
 
-endmodule 
+endmodule
