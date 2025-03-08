@@ -1,26 +1,26 @@
 module testbench();
 
-	logic a, b, c, z;
+	logic a, b, cin, d, bo;
 	
-	and_gate3 compuerta(a,b,c,z);
+	Restador modulo_restador(a,b,cin,d,bo);
 	
 	initial begin
 	
 	a = 0;
 	b = 0;
-	c = 0;
+	cin = 0;
 	#1000
 	a = 0;
-	b = 0;
-	c = 1;
+	b = 1;
+	cin = 0;
 	#1000
 	a = 1;
 	b = 0;
-	c = 1;
+	cin = 0;
 	#1000
 	a = 1;
 	b = 1;
-	c = 1;
+	cin = 0;
 	
 	end
 endmodule

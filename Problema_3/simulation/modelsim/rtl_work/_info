@@ -8,13 +8,38 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/simulation/modelsim
-vand_gate3
+vand_gate
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1741432245
+Z2 !s110 1741434860
+!i10b 1
+!s100 8S3hbWJVNj?n2O[8^Sn?`1
+IC3l9n0WZh@QmCjn4NcJ:Q3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 and_gate_sv_unit
+S1
+R0
+w1741430540
+8C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/and_gate.sv
+FC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/and_gate.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1741434860.000000
+!s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/and_gate.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/and_gate.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3
+Z8 tCvgOpt 0
+vand_gate3
+R1
+R2
 !i10b 1
 !s100 >^5>c4MZSR<M6_ZOcanoN0
 IJ3Y=ezgAkH>zbVgTz[j=`3
-Z3 VDg1SIo80bB@j0V0VzS_@n1
+R3
 !s105 and_gate3_sv_unit
 S1
 R0
@@ -22,28 +47,129 @@ w1741430551
 8C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/and_gate3.sv
 FC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/and_gate3.sv
 L0 1
-Z4 OV;L;10.5b;63
+R4
 r1
 !s85 0
 31
-Z5 !s108 1741432245.000000
+R5
 !s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/and_gate3.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/and_gate3.sv|
 !i113 1
-Z6 o-sv -work work
-Z7 !s92 -sv -work work +incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3
-Z8 tCvgOpt 0
+R6
+R7
+R8
+vnot_gate
+R1
+R2
+!i10b 1
+!s100 67?AWfmm^F>JY;P7I4_FS1
+IZaCnzg8K33cLjRcD4]j2S3
+R3
+!s105 not_gate_sv_unit
+S1
+R0
+w1741430556
+8C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/not_gate.sv
+FC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/not_gate.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/not_gate.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/not_gate.sv|
+!i113 1
+R6
+R7
+R8
+vor_gate3
+R1
+R2
+!i10b 1
+!s100 U;11NC38`3k:9c9CmJ2Y`3
+ISOH26Kog=J8IOmE`BQ;aA0
+R3
+!s105 or_gate3_sv_unit
+S1
+R0
+w1741430544
+8C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/or_gate3.sv
+FC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/or_gate3.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/or_gate3.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/or_gate3.sv|
+!i113 1
+R6
+R7
+R8
+vor_gate4
+R1
+R2
+!i10b 1
+!s100 `degX6C@KOfRBRQJQHAZR2
+I>moI6aI::5Fn3eg7k8k@n0
+R3
+!s105 or_gate4_sv_unit
+S1
+R0
+w1741430547
+8C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/or_gate4.sv
+FC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/or_gate4.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/or_gate4.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/or_gate4.sv|
+!i113 1
+R6
+R7
+R8
+vRestador
+R1
+R2
+!i10b 1
+!s100 ^dC9hW:ZaZFUb`o1:<=<l3
+IDma;_]ecHH=_[C^>k7GI93
+R3
+!s105 Restador_sv_unit
+S1
+R0
+w1741434836
+8C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv
+FC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv|
+!i113 1
+R6
+R7
+R8
+n@restador
 vtestbench
 R1
 R2
 !i10b 1
-!s100 dd4SQ71^LN3FafY;QYK=g1
-I_^1TF=klmz@T4f@zchD1V0
+!s100 n_h;ba=_i64fKXFIha`^]2
+I8j5GUo?Ib?mZhL[F3z3ZE1
 R3
 !s105 testbench_sv_unit
 S1
 R0
-w1741432212
+w1741434178
 8C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/testbench.sv
 FC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/testbench.sv
 L0 1

@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Sat Mar 08 05:10:30 2025
+Analysis & Elaboration Status : Successful - Sat Mar 08 05:54:08 2025
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Restador
-Top-level Entity Name : and_gate3
+Top-level Entity Name : Restador
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge
