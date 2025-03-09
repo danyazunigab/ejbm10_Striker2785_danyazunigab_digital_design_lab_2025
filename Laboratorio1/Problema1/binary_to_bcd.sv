@@ -1,0 +1,29 @@
+module binary_to_bcd(
+    input logic [3:0] binary_in,
+    output logic [3:0] bcd_out
+);
+    always_comb begin
+        // Por defecto, la salida es igual a la entrada para valores 0-9
+        bcd_out = binary_in;
+        
+        // Para valores 10-15, necesitamos convertir a BCD
+        // Si binary_in >= 10, aplicamos una conversión específica
+        
+        // Detecta si el valor es >= 10 (1010 en binario)
+        // Esto ocurre cuando bit3 = 1 Y (bit2 = 1 O bit1 = 1)
+        if ((binary_in[3] & binary_in[2]) | (binary_in[3] & binary_in[1])) begin
+            // Para 10 (1010): BCD = 0000 (ignorando el overflow)
+            // Para 11 (1011): BCD = 0001
+            // Para 12 (1100): BCD = 0010
+            // Para 13 (1101): BCD = 0011
+            // Para 14 (1110): BCD = 0100
+            // Para 15 (1111): BCD = 0101
+            
+            // Calculamos directamente los bits del resultado
+            bcd_out[0] = binary_in[0];
+            bcd_out[1] = (~binary_in[1] & binary_in[0]) | (binary_in[1] & ~binary_in[0]);
+            bcd_out[2] = binary_in[2] & ~binary_in[1];
+            bcd_out[3] = 1'b0;
+        end
+    end
+endmodule
