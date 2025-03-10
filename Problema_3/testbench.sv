@@ -1,26 +1,18 @@
 module testbench();
-
-	logic a, b, cin, d, bo;
+	parameter N = 8;
 	
-	Restador modulo_restador(a,b,cin,d,bo);
+	logic [N-1:0] init_number, current_number;
+	
+	ContadorRegresivo #(.N(N)) c1 (
+		.init_number(init_number),
+		.current_number(current_number)
+	);
 	
 	initial begin
 	
-	a = 0;
-	b = 0;
-	cin = 0;
-	#1000
-	a = 0;
-	b = 1;
-	cin = 0;
-	#1000
-	a = 1;
-	b = 0;
-	cin = 0;
-	#1000
-	a = 1;
-	b = 1;
-	cin = 0;
+	init_number = 8'b00110101;
+	
+	#1000;
 	
 	end
 endmodule

@@ -11,7 +11,6 @@ vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_d
 vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3 {C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/or_gate4.sv}
 vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3 {C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/and_gate3.sv}
 vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3 {C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/not_gate.sv}
-vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3 {C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv}
 
 vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3 {C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/testbench.sv}
 

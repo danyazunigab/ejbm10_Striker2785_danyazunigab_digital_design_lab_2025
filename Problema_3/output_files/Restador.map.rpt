@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Restador
-Sat Mar 08 05:54:08 2025
+Mon Mar 10 12:16:29 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -9,8 +9,17 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  4. Parameter Settings for User Entity Instance: Top-level Entity: |ContadorRegresivo
+  5. Analysis & Elaboration Settings
+  6. Port Connectivity Checks: "Restador:gen_block[7].resta1"
+  7. Port Connectivity Checks: "Restador:gen_block[6].resta1"
+  8. Port Connectivity Checks: "Restador:gen_block[5].resta1"
+  9. Port Connectivity Checks: "Restador:gen_block[4].resta1"
+ 10. Port Connectivity Checks: "Restador:gen_block[3].resta1"
+ 11. Port Connectivity Checks: "Restador:gen_block[2].resta1"
+ 12. Port Connectivity Checks: "Restador:gen_block[1].resta1"
+ 13. Port Connectivity Checks: "Restador:gen_block[0].resta1"
+ 14. Analysis & Elaboration Messages
 
 
 
@@ -36,10 +45,10 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Sat Mar 08 05:54:08 2025       ;
+; Analysis & Elaboration Status ; Successful - Mon Mar 10 12:16:29 2025       ;
 ; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                 ; Restador                                    ;
-; Top-level Entity Name         ; Restador                                    ;
+; Top-level Entity Name         ; ContadorRegresivo                           ;
 ; Family                        ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
 ; Total registers               ; N/A until Partition Merge                   ;
@@ -67,13 +76,23 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |ContadorRegresivo ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +---------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
-; Top-level entity name                                                           ; Restador           ; Restador           ;
+; Top-level entity name                                                           ; ContadorRegresivo  ; Restador           ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -154,18 +173,92 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Restador:gen_block[7].resta1"                                                       ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; b    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; bo   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "Restador:gen_block[6].resta1" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "Restador:gen_block[5].resta1" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "Restador:gen_block[4].resta1" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "Restador:gen_block[3].resta1" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "Restador:gen_block[2].resta1" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "Restador:gen_block[1].resta1" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "Restador:gen_block[0].resta1" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; b    ; Input ; Info     ; Stuck at VCC                   ;
+; cin  ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Mar 08 05:53:58 2025
+    Info: Processing started: Mon Mar 10 12:15:53 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Restador -c Restador --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file restador.sv
-    Info (12023): Found entity 1: Restador File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv Line: 1
+    Info (12023): Found entity 1: Restador File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file and_gate.sv
     Info (12023): Found entity 1: and_gate File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/and_gate.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file or_gate3.sv
@@ -178,16 +271,19 @@ Info (12021): Found 1 design units, including 1 entities, in source file not_gat
     Info (12023): Found entity 1: not_gate File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/not_gate.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testbench.sv
     Info (12023): Found entity 1: testbench File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/testbench.sv Line: 1
-Info (12127): Elaborating entity "Restador" for the top level hierarchy
-Info (12128): Elaborating entity "not_gate" for hierarchy "not_gate:not1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv Line: 17
-Info (12128): Elaborating entity "and_gate" for hierarchy "and_gate:and1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv Line: 33
-Info (12128): Elaborating entity "or_gate3" for hierarchy "or_gate3:or1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv Line: 52
-Info (12128): Elaborating entity "and_gate3" for hierarchy "and_gate3:and4" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv Line: 59
-Info (12128): Elaborating entity "or_gate4" for hierarchy "or_gate4:or2" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv Line: 88
+Info (12021): Found 1 design units, including 1 entities, in source file contadorregresivo.sv
+    Info (12023): Found entity 1: ContadorRegresivo File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 1
+Info (12127): Elaborating entity "ContadorRegresivo" for the top level hierarchy
+Info (12128): Elaborating entity "Restador" for hierarchy "Restador:gen_block[0].resta1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 17
+Info (12128): Elaborating entity "not_gate" for hierarchy "Restador:gen_block[0].resta1|not_gate:not1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv Line: 22
+Info (12128): Elaborating entity "and_gate" for hierarchy "Restador:gen_block[0].resta1|and_gate:and1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv Line: 38
+Info (12128): Elaborating entity "or_gate3" for hierarchy "Restador:gen_block[0].resta1|or_gate3:or1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv Line: 57
+Info (12128): Elaborating entity "and_gate3" for hierarchy "Restador:gen_block[0].resta1|and_gate3:and4" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv Line: 64
+Info (12128): Elaborating entity "or_gate4" for hierarchy "Restador:gen_block[0].resta1|or_gate4:or2" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv Line: 93
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4771 megabytes
-    Info: Processing ended: Sat Mar 08 05:54:08 2025
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Peak virtual memory: 4782 megabytes
+    Info: Processing ended: Mon Mar 10 12:16:29 2025
+    Info: Elapsed time: 00:00:36
+    Info: Total CPU time (on all processors): 00:00:31
 
 

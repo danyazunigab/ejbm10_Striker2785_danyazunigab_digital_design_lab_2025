@@ -1,4 +1,23 @@
-|Restador
+|ContadorRegresivo
+init_number[0] => init_number[0].IN1
+init_number[1] => init_number[1].IN1
+init_number[2] => init_number[2].IN1
+init_number[3] => init_number[3].IN1
+init_number[4] => init_number[4].IN1
+init_number[5] => init_number[5].IN1
+init_number[6] => init_number[6].IN1
+init_number[7] => init_number[7].IN1
+current_number[0] <= Restador:gen_block[0].resta1.d
+current_number[1] <= Restador:gen_block[1].resta1.d
+current_number[2] <= Restador:gen_block[2].resta1.d
+current_number[3] <= Restador:gen_block[3].resta1.d
+current_number[4] <= Restador:gen_block[4].resta1.d
+current_number[5] <= Restador:gen_block[5].resta1.d
+current_number[6] <= Restador:gen_block[6].resta1.d
+current_number[7] <= Restador:gen_block[7].resta1.d
+
+
+|ContadorRegresivo|Restador:gen_block[0].resta1
 a => a.IN3
 b => b.IN5
 cin => cin.IN5
@@ -6,75 +25,663 @@ d <= or_gate4:or2.y
 bo <= or_gate3:or1.y
 
 
-|Restador|not_gate:not1
+|ContadorRegresivo|Restador:gen_block[0].resta1|not_gate:not1
 a => y.DATAIN
 y <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Restador|not_gate:not2
+|ContadorRegresivo|Restador:gen_block[0].resta1|not_gate:not2
 a => y.DATAIN
 y <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Restador|not_gate:not3
+|ContadorRegresivo|Restador:gen_block[0].resta1|not_gate:not3
 a => y.DATAIN
 y <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Restador|and_gate:and1
+|ContadorRegresivo|Restador:gen_block[0].resta1|and_gate:and1
 a => y.IN0
 b => y.IN1
 y <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Restador|and_gate:and2
+|ContadorRegresivo|Restador:gen_block[0].resta1|and_gate:and2
 a => y.IN0
 b => y.IN1
 y <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Restador|and_gate:and3
+|ContadorRegresivo|Restador:gen_block[0].resta1|and_gate:and3
 a => y.IN0
 b => y.IN1
 y <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Restador|or_gate3:or1
-a => y.IN0
-b => y.IN1
-c => y.IN1
-y <= y.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Restador|and_gate3:and4
+|ContadorRegresivo|Restador:gen_block[0].resta1|or_gate3:or1
 a => y.IN0
 b => y.IN1
 c => y.IN1
 y <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Restador|and_gate3:and5
+|ContadorRegresivo|Restador:gen_block[0].resta1|and_gate3:and4
 a => y.IN0
 b => y.IN1
 c => y.IN1
 y <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Restador|and_gate3:and6
+|ContadorRegresivo|Restador:gen_block[0].resta1|and_gate3:and5
 a => y.IN0
 b => y.IN1
 c => y.IN1
 y <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Restador|and_gate3:and7
+|ContadorRegresivo|Restador:gen_block[0].resta1|and_gate3:and6
 a => y.IN0
 b => y.IN1
 c => y.IN1
 y <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Restador|or_gate4:or2
+|ContadorRegresivo|Restador:gen_block[0].resta1|and_gate3:and7
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[0].resta1|or_gate4:or2
+a => y.IN0
+b => y.IN1
+c => y.IN1
+d => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[1].resta1
+a => a.IN3
+b => b.IN5
+cin => cin.IN5
+d <= or_gate4:or2.y
+bo <= or_gate3:or1.y
+
+
+|ContadorRegresivo|Restador:gen_block[1].resta1|not_gate:not1
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[1].resta1|not_gate:not2
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[1].resta1|not_gate:not3
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[1].resta1|and_gate:and1
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[1].resta1|and_gate:and2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[1].resta1|and_gate:and3
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[1].resta1|or_gate3:or1
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[1].resta1|and_gate3:and4
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[1].resta1|and_gate3:and5
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[1].resta1|and_gate3:and6
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[1].resta1|and_gate3:and7
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[1].resta1|or_gate4:or2
+a => y.IN0
+b => y.IN1
+c => y.IN1
+d => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[2].resta1
+a => a.IN3
+b => b.IN5
+cin => cin.IN5
+d <= or_gate4:or2.y
+bo <= or_gate3:or1.y
+
+
+|ContadorRegresivo|Restador:gen_block[2].resta1|not_gate:not1
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[2].resta1|not_gate:not2
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[2].resta1|not_gate:not3
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[2].resta1|and_gate:and1
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[2].resta1|and_gate:and2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[2].resta1|and_gate:and3
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[2].resta1|or_gate3:or1
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[2].resta1|and_gate3:and4
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[2].resta1|and_gate3:and5
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[2].resta1|and_gate3:and6
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[2].resta1|and_gate3:and7
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[2].resta1|or_gate4:or2
+a => y.IN0
+b => y.IN1
+c => y.IN1
+d => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[3].resta1
+a => a.IN3
+b => b.IN5
+cin => cin.IN5
+d <= or_gate4:or2.y
+bo <= or_gate3:or1.y
+
+
+|ContadorRegresivo|Restador:gen_block[3].resta1|not_gate:not1
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[3].resta1|not_gate:not2
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[3].resta1|not_gate:not3
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[3].resta1|and_gate:and1
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[3].resta1|and_gate:and2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[3].resta1|and_gate:and3
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[3].resta1|or_gate3:or1
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[3].resta1|and_gate3:and4
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[3].resta1|and_gate3:and5
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[3].resta1|and_gate3:and6
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[3].resta1|and_gate3:and7
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[3].resta1|or_gate4:or2
+a => y.IN0
+b => y.IN1
+c => y.IN1
+d => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[4].resta1
+a => a.IN3
+b => b.IN5
+cin => cin.IN5
+d <= or_gate4:or2.y
+bo <= or_gate3:or1.y
+
+
+|ContadorRegresivo|Restador:gen_block[4].resta1|not_gate:not1
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[4].resta1|not_gate:not2
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[4].resta1|not_gate:not3
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[4].resta1|and_gate:and1
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[4].resta1|and_gate:and2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[4].resta1|and_gate:and3
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[4].resta1|or_gate3:or1
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[4].resta1|and_gate3:and4
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[4].resta1|and_gate3:and5
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[4].resta1|and_gate3:and6
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[4].resta1|and_gate3:and7
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[4].resta1|or_gate4:or2
+a => y.IN0
+b => y.IN1
+c => y.IN1
+d => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[5].resta1
+a => a.IN3
+b => b.IN5
+cin => cin.IN5
+d <= or_gate4:or2.y
+bo <= or_gate3:or1.y
+
+
+|ContadorRegresivo|Restador:gen_block[5].resta1|not_gate:not1
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[5].resta1|not_gate:not2
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[5].resta1|not_gate:not3
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[5].resta1|and_gate:and1
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[5].resta1|and_gate:and2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[5].resta1|and_gate:and3
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[5].resta1|or_gate3:or1
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[5].resta1|and_gate3:and4
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[5].resta1|and_gate3:and5
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[5].resta1|and_gate3:and6
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[5].resta1|and_gate3:and7
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[5].resta1|or_gate4:or2
+a => y.IN0
+b => y.IN1
+c => y.IN1
+d => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[6].resta1
+a => a.IN3
+b => b.IN5
+cin => cin.IN5
+d <= or_gate4:or2.y
+bo <= or_gate3:or1.y
+
+
+|ContadorRegresivo|Restador:gen_block[6].resta1|not_gate:not1
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[6].resta1|not_gate:not2
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[6].resta1|not_gate:not3
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[6].resta1|and_gate:and1
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[6].resta1|and_gate:and2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[6].resta1|and_gate:and3
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[6].resta1|or_gate3:or1
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[6].resta1|and_gate3:and4
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[6].resta1|and_gate3:and5
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[6].resta1|and_gate3:and6
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[6].resta1|and_gate3:and7
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[6].resta1|or_gate4:or2
+a => y.IN0
+b => y.IN1
+c => y.IN1
+d => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[7].resta1
+a => a.IN3
+b => b.IN5
+cin => cin.IN5
+d <= or_gate4:or2.y
+bo <= or_gate3:or1.y
+
+
+|ContadorRegresivo|Restador:gen_block[7].resta1|not_gate:not1
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[7].resta1|not_gate:not2
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[7].resta1|not_gate:not3
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[7].resta1|and_gate:and1
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[7].resta1|and_gate:and2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[7].resta1|and_gate:and3
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[7].resta1|or_gate3:or1
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[7].resta1|and_gate3:and4
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[7].resta1|and_gate3:and5
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[7].resta1|and_gate3:and6
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[7].resta1|and_gate3:and7
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ContadorRegresivo|Restador:gen_block[7].resta1|or_gate4:or2
 a => y.IN0
 b => y.IN1
 c => y.IN1
