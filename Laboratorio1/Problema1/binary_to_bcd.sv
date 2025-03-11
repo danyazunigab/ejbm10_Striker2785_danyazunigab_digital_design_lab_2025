@@ -1,29 +1,33 @@
 module binary_to_bcd(
     input logic [3:0] binary_in,
-    output logic [3:0] bcd_out
+    output logic [7:0] bcd_out
 );
-    always_comb begin
-        // Por defecto, la salida es igual a la entrada para valores 0-9
-        bcd_out = binary_in;
-        
-        // Para valores 10-15, necesitamos convertir a BCD
-        // Si binary_in >= 10, aplicamos una conversión específica
-        
-        // Detecta si el valor es >= 10 (1010 en binario)
-        // Esto ocurre cuando bit3 = 1 Y (bit2 = 1 O bit1 = 1)
-        if ((binary_in[3] & binary_in[2]) | (binary_in[3] & binary_in[1])) begin
-            // Para 10 (1010): BCD = 0000 (ignorando el overflow)
-            // Para 11 (1011): BCD = 0001
-            // Para 12 (1100): BCD = 0010
-            // Para 13 (1101): BCD = 0011
-            // Para 14 (1110): BCD = 0100
-            // Para 15 (1111): BCD = 0101
-            
-            // Calculamos directamente los bits del resultado
-            bcd_out[0] = binary_in[0];
-            bcd_out[1] = (~binary_in[1] & binary_in[0]) | (binary_in[1] & ~binary_in[0]);
-            bcd_out[2] = binary_in[2] & ~binary_in[1];
-            bcd_out[3] = 1'b0;
-        end
-    end
+	logic [3:0] unidades;
+	logic [3:0] decenas;
+	
+	always_comb begin
+	
+		unidades = 4'b0000;
+		decenas = 4'b0000;
+		//1 si el numero es >= 10
+		decenas[0] = (binary_in[3] & binary_in[1]) | (binary_in[3] & binary_in[2]);
+		
+		//num < 10 entonces unidades = binary_in
+		//num >= 10 entonces unidades = binary_in - 10
+      unidades[0] = (binary_in[0] & ~decenas[0]) | 
+                     (~binary_in[3] & ~binary_in[2] & ~binary_in[1] & binary_in[0]) | 
+                     (binary_in[3] & binary_in[2] & ~binary_in[0]);
+                     
+      unidades[1] = (binary_in[1] & ~decenas[0]) | 
+                     (binary_in[3] & ~binary_in[2] & ~binary_in[1] & binary_in[0]) |
+                     (binary_in[3] & binary_in[2] & binary_in[0]);
+                     
+      unidades[2] = (binary_in[2] & ~decenas[0]) | 
+                     (binary_in[3] & ~binary_in[2] & binary_in[1] & ~binary_in[0]);
+                     
+      unidades[3] = (binary_in[3] & ~decenas[0]);
+		
+		bcd_out = {decenas, unidades};
+		
+      end
 endmodule
