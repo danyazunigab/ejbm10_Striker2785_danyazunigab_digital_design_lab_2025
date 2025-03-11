@@ -38,7 +38,7 @@
 
 
 set_global_assignment -name FAMILY "Cyclone V"
-set_global_assignment -name DEVICE 5CGXFC7C7F23C8
+set_global_assignment -name DEVICE 5CSXFC6D6F31C6
 set_global_assignment -name TOP_LEVEL_ENTITY FourBitAdder_FPGA
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.2
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:17:08  MARCH 09, 2025"
@@ -66,3 +66,18 @@ set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Prueba
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Prueba -section_id Prueba
 set_global_assignment -name EDA_TEST_BENCH_FILE FourBitAdder_tb.vhd -section_id Prueba
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_location_assignment PIN_AB30 -to SW[0]
+set_location_assignment PIN_AB28 -to SW[2]
+set_location_assignment PIN_Y27 -to SW[1]
+set_location_assignment PIN_AC30 -to SW[3]
+set_location_assignment PIN_W25 -to SW[4]
+set_location_assignment PIN_V25 -to SW[5]
+set_location_assignment PIN_AC28 -to SW[6]
+set_location_assignment PIN_AD30 -to SW[7]
+set_location_assignment PIN_W17 -to HEX[0]
+set_location_assignment PIN_V18 -to HEX[1]
+set_location_assignment PIN_AG17 -to HEX[2]
+set_location_assignment PIN_AG16 -to HEX[3]
+set_location_assignment PIN_AH17 -to HEX[4]
+set_location_assignment PIN_AG18 -to HEX[5]
+set_location_assignment PIN_AH18 -to HEX[6]
