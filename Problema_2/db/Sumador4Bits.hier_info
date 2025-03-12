@@ -1,0 +1,81 @@
+|FourBitAdder_FPGA
+SW[0] => FourBitAdder:SUMADOR.B[0]
+SW[1] => FourBitAdder:SUMADOR.B[1]
+SW[2] => FourBitAdder:SUMADOR.B[2]
+SW[3] => FourBitAdder:SUMADOR.B[3]
+SW[4] => FourBitAdder:SUMADOR.A[0]
+SW[5] => FourBitAdder:SUMADOR.A[1]
+SW[6] => FourBitAdder:SUMADOR.A[2]
+SW[7] => FourBitAdder:SUMADOR.A[3]
+Cin => FourBitAdder:SUMADOR.Cin
+HEX[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= FourBitAdder:SUMADOR.Cout
+
+
+|FourBitAdder_FPGA|FourBitAdder:SUMADOR
+A[0] => FullAdder:FA0.A
+A[1] => FullAdder:FA1.A
+A[2] => FullAdder:FA2.A
+A[3] => FullAdder:FA3.A
+B[0] => FullAdder:FA0.B
+B[1] => FullAdder:FA1.B
+B[2] => FullAdder:FA2.B
+B[3] => FullAdder:FA3.B
+Cin => FullAdder:FA0.Cin
+Sum[0] <= FullAdder:FA0.Sum
+Sum[1] <= FullAdder:FA1.Sum
+Sum[2] <= FullAdder:FA2.Sum
+Sum[3] <= FullAdder:FA3.Sum
+Cout <= FullAdder:FA3.Cout
+
+
+|FourBitAdder_FPGA|FourBitAdder:SUMADOR|FullAdder:FA0
+A => Sum.IN0
+A => Cout.IN0
+B => Sum.IN1
+B => Cout.IN1
+Cin => Sum.IN1
+Cin => Cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FourBitAdder_FPGA|FourBitAdder:SUMADOR|FullAdder:FA1
+A => Sum.IN0
+A => Cout.IN0
+B => Sum.IN1
+B => Cout.IN1
+Cin => Sum.IN1
+Cin => Cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FourBitAdder_FPGA|FourBitAdder:SUMADOR|FullAdder:FA2
+A => Sum.IN0
+A => Cout.IN0
+B => Sum.IN1
+B => Cout.IN1
+Cin => Sum.IN1
+Cin => Cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FourBitAdder_FPGA|FourBitAdder:SUMADOR|FullAdder:FA3
+A => Sum.IN0
+A => Cout.IN0
+B => Sum.IN1
+B => Cout.IN1
+Cin => Sum.IN1
+Cin => Cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
