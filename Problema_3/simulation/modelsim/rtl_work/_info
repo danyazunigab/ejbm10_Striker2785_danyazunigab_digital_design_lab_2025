@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/simulation/modelsim
 vand_gate
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1741630615
+Z2 !s110 1741746813
 !i10b 1
 !s100 8S3hbWJVNj?n2O[8^Sn?`1
 IC3l9n0WZh@QmCjn4NcJ:Q3
@@ -26,7 +26,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1741630615.000000
+Z5 !s108 1741746813.000000
 !s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/and_gate.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/and_gate.sv|
 !i113 1
@@ -35,7 +35,7 @@ Z7 !s92 -sv -work work +incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker278
 Z8 tCvgOpt 0
 vand_gate3
 R1
-R2
+Z9 !s110 1741746814
 !i10b 1
 !s100 >^5>c4MZSR<M6_ZOcanoN0
 IJ3Y=ezgAkH>zbVgTz[j=`3
@@ -51,7 +51,7 @@ R4
 r1
 !s85 0
 31
-R5
+Z10 !s108 1741746814.000000
 !s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/and_gate3.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/and_gate3.sv|
 !i113 1
@@ -60,15 +60,15 @@ R7
 R8
 vContadorRegresivo
 R1
-R2
+R9
 !i10b 1
-!s100 A2NO]k62b943Y@iNzTT[j1
-IR12J1N42Pm?mQo]8VB_jz0
+!s100 In;>Bm^a@^bUTT:7VCCfl2
+InbTDA]6C@hSEbn@_aMgOo1
 R3
 !s105 ContadorRegresivo_sv_unit
 S1
 R0
-w1741630540
+w1741746793
 8C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv
 FC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv
 L0 1
@@ -76,7 +76,7 @@ R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv|
 !i113 1
@@ -86,7 +86,7 @@ R8
 n@contador@regresivo
 vnot_gate
 R1
-R2
+R9
 !i10b 1
 !s100 67?AWfmm^F>JY;P7I4_FS1
 IZaCnzg8K33cLjRcD4]j2S3
@@ -102,7 +102,7 @@ R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/not_gate.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/not_gate.sv|
 !i113 1
@@ -136,7 +136,7 @@ R7
 R8
 vor_gate4
 R1
-R2
+R9
 !i10b 1
 !s100 `degX6C@KOfRBRQJQHAZR2
 I>moI6aI::5Fn3eg7k8k@n0
@@ -177,7 +177,7 @@ R4
 r1
 !s85 0
 31
-!s108 1741630614.000000
+R5
 !s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv|
 !i113 1
@@ -187,15 +187,15 @@ R8
 n@restador
 vtestbench
 R1
-R2
+!s110 1741746815
 !i10b 1
-!s100 KK1FMLFcI@BO>GHBO8>VF3
-IMc[`Zz=f3B;hdBJdOjkO81
+!s100 E>o@8X_FBUVCA]@<dla]Z0
+IW2>`VIgne;ba:oU@f1kzJ0
 R3
 !s105 testbench_sv_unit
 S1
 R0
-w1741630319
+w1741743917
 8C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/testbench.sv
 FC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/testbench.sv
 L0 1
@@ -203,7 +203,7 @@ R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/testbench.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/testbench.sv|
 !i113 1
