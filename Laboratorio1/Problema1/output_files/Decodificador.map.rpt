@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Decodificador
-Tue Mar 11 14:07:36 2025
+Tue Mar 11 18:49:54 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Mar 11 14:07:36 2025          ;
+; Analysis & Synthesis Status     ; Successful - Tue Mar 11 18:49:54 2025          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; Decodificador                                  ;
 ; Top-level Entity Name           ; top_module                                     ;
@@ -182,13 +182,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------------+
 ; Resource                                    ; Usage             ;
 +---------------------------------------------+-------------------+
-; Estimate of Logic utilization (ALMs needed) ; 4                 ;
+; Estimate of Logic utilization (ALMs needed) ; 6                 ;
 ;                                             ;                   ;
-; Combinational ALUT usage for logic          ; 8                 ;
+; Combinational ALUT usage for logic          ; 12                ;
 ;     -- 7 input functions                    ; 0                 ;
 ;     -- 6 input functions                    ; 0                 ;
 ;     -- 5 input functions                    ; 0                 ;
-;     -- 4 input functions                    ; 7                 ;
+;     -- 4 input functions                    ; 11                ;
 ;     -- <=3 input functions                  ; 1                 ;
 ;                                             ;                   ;
 ; Dedicated logic registers                   ; 0                 ;
@@ -197,10 +197,10 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                   ;
 ; Total DSP Blocks                            ; 0                 ;
 ;                                             ;                   ;
-; Maximum fan-out node                        ; switches[2]~input ;
-; Maximum fan-out                             ; 8                 ;
-; Total fan-out                               ; 60                ;
-; Average fan-out                             ; 1.36              ;
+; Maximum fan-out node                        ; switches[1]~input ;
+; Maximum fan-out                             ; 11                ;
+; Total fan-out                               ; 76                ;
+; Average fan-out                             ; 1.58              ;
 +---------------------------------------------+-------------------+
 
 
@@ -209,9 +209,9 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                             ; Entity Name           ; Library Name ;
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------+-----------------------+--------------+
-; |top_module                              ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 18   ; 0            ; |top_module                                     ; top_module            ; work         ;
+; |top_module                              ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 18   ; 0            ; |top_module                                     ; top_module            ; work         ;
 ;    |binary_to_bcd:decoder|               ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_module|binary_to_bcd:decoder               ; binary_to_bcd         ; work         ;
-;    |seven_segment_decoder:decoder_units| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_module|seven_segment_decoder:decoder_units ; seven_segment_decoder ; work         ;
+;    |seven_segment_decoder:decoder_units| ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_module|seven_segment_decoder:decoder_units ; seven_segment_decoder ; work         ;
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -236,16 +236,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 11                          ;
-;     normal            ; 11                          ;
+; arriav_lcell_comb     ; 18                          ;
+;     normal            ; 18                          ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 1                           ;
+;         1 data inputs ; 4                           ;
 ;         3 data inputs ; 1                           ;
-;         4 data inputs ; 7                           ;
+;         4 data inputs ; 11                          ;
 ; boundary_port         ; 18                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.27                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.09                        ;
 +-----------------------+-----------------------------+
 
 
@@ -264,7 +264,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Tue Mar 11 14:07:25 2025
+    Info: Processing started: Tue Mar 11 18:49:44 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Decodificador -c Decodificador
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -277,23 +277,23 @@ Info (12021): Found 1 design units, including 1 entities, in source file seven_s
 Info (12021): Found 1 design units, including 1 entities, in source file binary_to_bcd_testbench.sv
     Info (12023): Found entity 1: binary_to_bcd_tb File: Z:/devWS/TallerDD/Laboratorios/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Laboratorio1/Problema1/binary_to_bcd_testbench.sv Line: 3
 Info (12127): Elaborating entity "top_module" for the top level hierarchy
-Info (12128): Elaborating entity "binary_to_bcd" for hierarchy "binary_to_bcd:decoder" File: Z:/devWS/TallerDD/Laboratorios/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Laboratorio1/Problema1/top_module.sv Line: 15
-Info (12128): Elaborating entity "seven_segment_decoder" for hierarchy "seven_segment_decoder:decoder_units" File: Z:/devWS/TallerDD/Laboratorios/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Laboratorio1/Problema1/top_module.sv Line: 24
+Info (12128): Elaborating entity "binary_to_bcd" for hierarchy "binary_to_bcd:decoder" File: Z:/devWS/TallerDD/Laboratorios/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Laboratorio1/Problema1/top_module.sv Line: 14
+Info (12128): Elaborating entity "seven_segment_decoder" for hierarchy "seven_segment_decoder:decoder_units" File: Z:/devWS/TallerDD/Laboratorios/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Laboratorio1/Problema1/top_module.sv Line: 23
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "seg_tens[1]" is stuck at GND File: Z:/devWS/TallerDD/Laboratorios/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Laboratorio1/Problema1/top_module.sv Line: 6
-    Warning (13410): Pin "seg_tens[2]" is stuck at GND File: Z:/devWS/TallerDD/Laboratorios/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Laboratorio1/Problema1/top_module.sv Line: 6
-    Warning (13410): Pin "seg_tens[6]" is stuck at VCC File: Z:/devWS/TallerDD/Laboratorios/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Laboratorio1/Problema1/top_module.sv Line: 6
+    Warning (13410): Pin "seg_tens[1]" is stuck at GND File: Z:/devWS/TallerDD/Laboratorios/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Laboratorio1/Problema1/top_module.sv Line: 5
+    Warning (13410): Pin "seg_tens[2]" is stuck at GND File: Z:/devWS/TallerDD/Laboratorios/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Laboratorio1/Problema1/top_module.sv Line: 5
+    Warning (13410): Pin "seg_tens[6]" is stuck at VCC File: Z:/devWS/TallerDD/Laboratorios/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Laboratorio1/Problema1/top_module.sv Line: 5
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 26 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 30 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 8 logic cells
+    Info (21061): Implemented 12 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4829 megabytes
-    Info: Processing ended: Tue Mar 11 14:07:36 2025
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Processing ended: Tue Mar 11 18:49:54 2025
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:22
 
 

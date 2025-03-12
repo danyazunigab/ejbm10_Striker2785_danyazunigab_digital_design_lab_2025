@@ -2,7 +2,6 @@ module top_module(
     input logic [3:0] switches,  // 4 switches para la entrada binaria
     output logic [6:0] seg_units,	// 7 segmentos para unidades
     output logic [6:0] seg_tens//,	// 7 segmentos para decenas
-	 //an[5:0] //Control de anodos para displays
 );
     logic [7:0] bcd;
 	 logic [3:0] digit_units;
@@ -28,13 +27,5 @@ module top_module(
         .bcd_in(digit_tens),
         .segments(seg_tens)
     );
-	 /*
-	 assign an[0] = 0;
-	 assign an[1] = 0;
-	 assign an[2] = 1;
-	 assign an[3] = 1;
-	 assign an[4] = 1;
-	 assign an[5] = 1;
-	 */
 	 
 endmodule		
