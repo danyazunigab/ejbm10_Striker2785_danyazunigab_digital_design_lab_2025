@@ -1,3 +1,18 @@
+/*
+Módulo del contador regresivo
+
+Utiliza el módulo de resta para decrementar la cantidad del contador.
+
+Parámetros:
+	- N (para simulación): determina la cantidad de bits de los números.
+	- clk: El reloj del sistema.
+	- rst_async: Señal de reset para reiniciar el contador a su valor inicial.
+	- init_number: Número desde dónde empieza el contador.
+	- count: Registro que almacena la cuenta.
+	
+Autor: Eduardo Bolívar Minguet
+*/
+
 module ContadorRegresivo #(parameter N = 10) (
     input logic clk,
     input logic rst_async,
@@ -7,6 +22,7 @@ module ContadorRegresivo #(parameter N = 10) (
 	logic [N-1:0] next_number;
 	logic [N-1:0] bouts;
 	
+	// Se generan N módulos restadores para los N bits del minuendo y el sustraendo.
 	generate
 		genvar i;
 		for (i = 0; i < N; i++) begin : substractor
@@ -20,6 +36,7 @@ module ContadorRegresivo #(parameter N = 10) (
 		end
 	endgenerate
 	
+	// Flip flop que disminuye la cuenta en cada ciclo del reloj
 	always_ff @(posedge clk or negedge rst_async) begin
 		if (!rst_async)
 			count <= init_number;
