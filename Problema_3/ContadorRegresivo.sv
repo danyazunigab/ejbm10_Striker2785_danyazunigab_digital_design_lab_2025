@@ -1,4 +1,4 @@
-module ContadorRegresivo #(parameter N = 8) (
+module ContadorRegresivo #(parameter N = 10) (
     input logic clk,
     input logic rst_async,
     input logic [N-1:0] init_number,

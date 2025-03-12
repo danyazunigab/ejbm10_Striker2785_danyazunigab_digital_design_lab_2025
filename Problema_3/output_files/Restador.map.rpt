@@ -1,5 +1,5 @@
-Analysis & Elaboration report for Restador
-Tue Mar 11 21:34:39 2025
+Analysis & Synthesis report for Restador
+Tue Mar 11 22:33:22 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -7,19 +7,27 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: Top-level Entity: |ContadorRegresivo
-  5. Analysis & Elaboration Settings
-  6. Port Connectivity Checks: "Restador:substractor[7].r1"
-  7. Port Connectivity Checks: "Restador:substractor[6].r1"
-  8. Port Connectivity Checks: "Restador:substractor[5].r1"
-  9. Port Connectivity Checks: "Restador:substractor[4].r1"
- 10. Port Connectivity Checks: "Restador:substractor[3].r1"
- 11. Port Connectivity Checks: "Restador:substractor[2].r1"
- 12. Port Connectivity Checks: "Restador:substractor[1].r1"
- 13. Port Connectivity Checks: "Restador:substractor[0].r1"
- 14. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |ContadorRegresivo
+ 10. Port Connectivity Checks: "Restador:substractor[9].r1"
+ 11. Port Connectivity Checks: "Restador:substractor[8].r1"
+ 12. Port Connectivity Checks: "Restador:substractor[7].r1"
+ 13. Port Connectivity Checks: "Restador:substractor[6].r1"
+ 14. Port Connectivity Checks: "Restador:substractor[5].r1"
+ 15. Port Connectivity Checks: "Restador:substractor[4].r1"
+ 16. Port Connectivity Checks: "Restador:substractor[3].r1"
+ 17. Port Connectivity Checks: "Restador:substractor[2].r1"
+ 18. Port Connectivity Checks: "Restador:substractor[1].r1"
+ 19. Port Connectivity Checks: "Restador:substractor[0].r1"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -42,52 +50,31 @@ refer to the applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Tue Mar 11 21:34:39 2025       ;
-; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name                 ; Restador                                    ;
-; Top-level Entity Name         ; ContadorRegresivo                           ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |ContadorRegresivo ;
-+----------------+-------+----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                     ;
-+----------------+-------+----------------------------------------------------------+
-; N              ; 8     ; Signed Integer                                           ;
-+----------------+-------+----------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Mar 11 22:33:22 2025       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; Restador                                    ;
+; Top-level Entity Name           ; ContadorRegresivo                           ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 10                                          ;
+; Total pins                      ; 22                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -173,14 +160,128 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                            ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+; Restador.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv          ;         ;
+; and_gate.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/and_gate.sv          ;         ;
+; or_gate3.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/or_gate3.sv          ;         ;
+; or_gate4.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/or_gate4.sv          ;         ;
+; and_gate3.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/and_gate3.sv         ;         ;
+; not_gate.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/not_gate.sv          ;         ;
+; ContadorRegresivo.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimate of Logic utilization (ALMs needed) ; 20              ;
+;                                             ;                 ;
+; Combinational ALUT usage for logic          ; 39              ;
+;     -- 7 input functions                    ; 0               ;
+;     -- 6 input functions                    ; 1               ;
+;     -- 5 input functions                    ; 2               ;
+;     -- 4 input functions                    ; 19              ;
+;     -- <=3 input functions                  ; 17              ;
+;                                             ;                 ;
+; Dedicated logic registers                   ; 10              ;
+;                                             ;                 ;
+; I/O pins                                    ; 22              ;
+;                                             ;                 ;
+; Total DSP Blocks                            ; 0               ;
+;                                             ;                 ;
+; Maximum fan-out node                        ; rst_async~input ;
+; Maximum fan-out                             ; 30              ;
+; Total fan-out                               ; 202             ;
+; Average fan-out                             ; 2.17            ;
++---------------------------------------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                      ;
++---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                        ; Entity Name       ; Library Name ;
++---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------+-------------------+--------------+
+; |ContadorRegresivo              ; 39 (38)             ; 10 (10)                   ; 0                 ; 0          ; 22   ; 0            ; |ContadorRegresivo                                         ; ContadorRegresivo ; work         ;
+;    |Restador:substractor[1].r1| ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ContadorRegresivo|Restador:substractor[1].r1              ; Restador          ; work         ;
+;       |or_gate4:or2|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ContadorRegresivo|Restador:substractor[1].r1|or_gate4:or2 ; or_gate4          ; work         ;
++---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 10    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 10    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 2     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |ContadorRegresivo ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; N              ; 10    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Restador:substractor[7].r1"                                                         ;
+; Port Connectivity Checks: "Restador:substractor[9].r1"                                                         ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; b    ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; bo   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "Restador:substractor[8].r1" ;
++------+-------+----------+------------------------------+
+; Port ; Type  ; Severity ; Details                      ;
++------+-------+----------+------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                 ;
++------+-------+----------+------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "Restador:substractor[7].r1" ;
++------+-------+----------+------------------------------+
+; Port ; Type  ; Severity ; Details                      ;
++------+-------+----------+------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                 ;
++------+-------+----------+------------------------------+
 
 
 +--------------------------------------------------------+
@@ -247,14 +348,45 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+------------------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 10                          ;
+;     CLR               ; 8                           ;
+;     ENA CLR           ; 2                           ;
+; arriav_lcell_comb     ; 39                          ;
+;     normal            ; 39                          ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 12                          ;
+;         4 data inputs ; 19                          ;
+;         5 data inputs ; 2                           ;
+;         6 data inputs ; 1                           ;
+; boundary_port         ; 22                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 3.18                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Mar 11 21:34:31 2025
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Restador -c Restador --analysis_and_elaboration
+    Info: Processing started: Tue Mar 11 22:33:12 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Restador -c Restador
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file restador.sv
@@ -284,10 +416,28 @@ Info (12128): Elaborating entity "and_gate" for hierarchy "Restador:substractor[
 Info (12128): Elaborating entity "or_gate3" for hierarchy "Restador:substractor[0].r1|or_gate3:or1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv Line: 57
 Info (12128): Elaborating entity "and_gate3" for hierarchy "Restador:substractor[0].r1|and_gate3:and4" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv Line: 64
 Info (12128): Elaborating entity "or_gate4" for hierarchy "Restador:substractor[0].r1|or_gate4:or2" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv Line: 93
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4770 megabytes
-    Info: Processing ended: Tue Mar 11 21:34:39 2025
-    Info: Elapsed time: 00:00:08
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "count[0]~reg0" is converted into an equivalent circuit using register "count[0]~reg0_emulated" and latch "count[0]~1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 26
+    Warning (13310): Register "count[1]~reg0" is converted into an equivalent circuit using register "count[1]~reg0_emulated" and latch "count[1]~5" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 26
+    Warning (13310): Register "count[2]~reg0" is converted into an equivalent circuit using register "count[2]~reg0_emulated" and latch "count[2]~9" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 26
+    Warning (13310): Register "count[3]~reg0" is converted into an equivalent circuit using register "count[3]~reg0_emulated" and latch "count[3]~13" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 26
+    Warning (13310): Register "count[4]~reg0" is converted into an equivalent circuit using register "count[4]~reg0_emulated" and latch "count[4]~17" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 26
+    Warning (13310): Register "count[5]~reg0" is converted into an equivalent circuit using register "count[5]~reg0_emulated" and latch "count[5]~21" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 26
+    Warning (13310): Register "count[6]~reg0" is converted into an equivalent circuit using register "count[6]~reg0_emulated" and latch "count[6]~25" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 26
+    Warning (13310): Register "count[7]~reg0" is converted into an equivalent circuit using register "count[7]~reg0_emulated" and latch "count[7]~29" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 26
+    Warning (13310): Register "count[8]~reg0" is converted into an equivalent circuit using register "count[8]~reg0_emulated" and latch "count[8]~33" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 26
+    Warning (13310): Register "count[9]~reg0" is converted into an equivalent circuit using register "count[9]~reg0_emulated" and latch "count[9]~37" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 26
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 61 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 10 output pins
+    Info (21061): Implemented 39 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4828 megabytes
+    Info: Processing ended: Tue Mar 11 22:33:22 2025
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:20
 
 
