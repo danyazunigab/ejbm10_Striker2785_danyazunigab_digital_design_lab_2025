@@ -2,7 +2,8 @@
 Este es el módulo principal de implementación de un restador completo.
 Realiza la resta A - B = D
 Retorna el resultado D y el Bo en caso de pedir prestado (Borrow).
-Bo ingresa a la siguiente resta como Cin
+
+Autor: Eduardo Bolívar Minguet
 */
 module Restador(
 	input logic a, 
@@ -12,10 +13,11 @@ module Restador(
 	output logic bo
 );
 
-logic not_a, not_b, not_cin;
-logic not_a_b, not_a_cin, b_cin;
-logic not_a_not_b_cin, not_a_b_not_cin, a_b_cin, a_not_b_not_cin;
+logic not_a, not_b, not_cin;	// Las entradas pasan por inversores
+logic not_a_b, not_a_cin, b_cin;	// Pasan por compuertas AND
+logic not_a_not_b_cin, not_a_b_not_cin, a_b_cin, a_not_b_not_cin; // Pasan por compuertas AND
 
+// A continuación todo el circuito combinatorio
 not_gate not1(
 	.a(a),
 	.y(not_a)

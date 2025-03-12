@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Restador
-Tue Mar 11 22:33:22 2025
+Tue Mar 11 23:07:59 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -53,7 +53,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Mar 11 22:33:22 2025       ;
+; Analysis & Synthesis Status     ; Successful - Tue Mar 11 23:07:59 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; Restador                                    ;
 ; Top-level Entity Name           ; ContadorRegresivo                           ;
@@ -385,24 +385,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Mar 11 22:33:12 2025
+    Info: Processing started: Tue Mar 11 23:07:50 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Restador -c Restador
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file restador.sv
-    Info (12023): Found entity 1: Restador File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv Line: 7
+    Info (12023): Found entity 1: Restador File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file and_gate.sv
-    Info (12023): Found entity 1: and_gate File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/and_gate.sv Line: 1
+    Info (12023): Found entity 1: and_gate File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/and_gate.sv Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file or_gate3.sv
-    Info (12023): Found entity 1: or_gate3 File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/or_gate3.sv Line: 1
+    Info (12023): Found entity 1: or_gate3 File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/or_gate3.sv Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file or_gate4.sv
-    Info (12023): Found entity 1: or_gate4 File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/or_gate4.sv Line: 1
+    Info (12023): Found entity 1: or_gate4 File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/or_gate4.sv Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file and_gate3.sv
-    Info (12023): Found entity 1: and_gate3 File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/and_gate3.sv Line: 1
+    Info (12023): Found entity 1: and_gate3 File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/and_gate3.sv Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file not_gate.sv
-    Info (12023): Found entity 1: not_gate File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/not_gate.sv Line: 1
+    Info (12023): Found entity 1: not_gate File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/not_gate.sv Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file contadorregresivo.sv
-    Info (12023): Found entity 1: ContadorRegresivo File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 1
+    Info (12023): Found entity 1: ContadorRegresivo File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 16
 Info (12021): Found 1 design units, including 1 entities, in source file contadorregresivo_tb_2bits.sv
     Info (12023): Found entity 1: ContadorRegresivo_tb_2bits File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo_tb_2bits.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file contadorregresivo_tb_4bits.sv
@@ -410,23 +410,23 @@ Info (12021): Found 1 design units, including 1 entities, in source file contado
 Info (12021): Found 1 design units, including 1 entities, in source file contadorregresivo_tb_6bits.sv
     Info (12023): Found entity 1: ContadorRegresivo_tb_6bits File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo_tb_6bits.sv Line: 1
 Info (12127): Elaborating entity "ContadorRegresivo" for the top level hierarchy
-Info (12128): Elaborating entity "Restador" for hierarchy "Restador:substractor[0].r1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 19
-Info (12128): Elaborating entity "not_gate" for hierarchy "Restador:substractor[0].r1|not_gate:not1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv Line: 22
-Info (12128): Elaborating entity "and_gate" for hierarchy "Restador:substractor[0].r1|and_gate:and1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv Line: 38
-Info (12128): Elaborating entity "or_gate3" for hierarchy "Restador:substractor[0].r1|or_gate3:or1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv Line: 57
-Info (12128): Elaborating entity "and_gate3" for hierarchy "Restador:substractor[0].r1|and_gate3:and4" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv Line: 64
-Info (12128): Elaborating entity "or_gate4" for hierarchy "Restador:substractor[0].r1|or_gate4:or2" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv Line: 93
+Info (12128): Elaborating entity "Restador" for hierarchy "Restador:substractor[0].r1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 35
+Info (12128): Elaborating entity "not_gate" for hierarchy "Restador:substractor[0].r1|not_gate:not1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv Line: 24
+Info (12128): Elaborating entity "and_gate" for hierarchy "Restador:substractor[0].r1|and_gate:and1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv Line: 40
+Info (12128): Elaborating entity "or_gate3" for hierarchy "Restador:substractor[0].r1|or_gate3:or1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv Line: 59
+Info (12128): Elaborating entity "and_gate3" for hierarchy "Restador:substractor[0].r1|and_gate3:and4" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv Line: 66
+Info (12128): Elaborating entity "or_gate4" for hierarchy "Restador:substractor[0].r1|or_gate4:or2" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/Restador.sv Line: 95
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "count[0]~reg0" is converted into an equivalent circuit using register "count[0]~reg0_emulated" and latch "count[0]~1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 26
-    Warning (13310): Register "count[1]~reg0" is converted into an equivalent circuit using register "count[1]~reg0_emulated" and latch "count[1]~5" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 26
-    Warning (13310): Register "count[2]~reg0" is converted into an equivalent circuit using register "count[2]~reg0_emulated" and latch "count[2]~9" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 26
-    Warning (13310): Register "count[3]~reg0" is converted into an equivalent circuit using register "count[3]~reg0_emulated" and latch "count[3]~13" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 26
-    Warning (13310): Register "count[4]~reg0" is converted into an equivalent circuit using register "count[4]~reg0_emulated" and latch "count[4]~17" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 26
-    Warning (13310): Register "count[5]~reg0" is converted into an equivalent circuit using register "count[5]~reg0_emulated" and latch "count[5]~21" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 26
-    Warning (13310): Register "count[6]~reg0" is converted into an equivalent circuit using register "count[6]~reg0_emulated" and latch "count[6]~25" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 26
-    Warning (13310): Register "count[7]~reg0" is converted into an equivalent circuit using register "count[7]~reg0_emulated" and latch "count[7]~29" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 26
-    Warning (13310): Register "count[8]~reg0" is converted into an equivalent circuit using register "count[8]~reg0_emulated" and latch "count[8]~33" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 26
-    Warning (13310): Register "count[9]~reg0" is converted into an equivalent circuit using register "count[9]~reg0_emulated" and latch "count[9]~37" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 26
+    Warning (13310): Register "count[0]~reg0" is converted into an equivalent circuit using register "count[0]~reg0_emulated" and latch "count[0]~1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 43
+    Warning (13310): Register "count[1]~reg0" is converted into an equivalent circuit using register "count[1]~reg0_emulated" and latch "count[1]~5" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 43
+    Warning (13310): Register "count[2]~reg0" is converted into an equivalent circuit using register "count[2]~reg0_emulated" and latch "count[2]~9" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 43
+    Warning (13310): Register "count[3]~reg0" is converted into an equivalent circuit using register "count[3]~reg0_emulated" and latch "count[3]~13" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 43
+    Warning (13310): Register "count[4]~reg0" is converted into an equivalent circuit using register "count[4]~reg0_emulated" and latch "count[4]~17" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 43
+    Warning (13310): Register "count[5]~reg0" is converted into an equivalent circuit using register "count[5]~reg0_emulated" and latch "count[5]~21" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 43
+    Warning (13310): Register "count[6]~reg0" is converted into an equivalent circuit using register "count[6]~reg0_emulated" and latch "count[6]~25" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 43
+    Warning (13310): Register "count[7]~reg0" is converted into an equivalent circuit using register "count[7]~reg0_emulated" and latch "count[7]~29" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 43
+    Warning (13310): Register "count[8]~reg0" is converted into an equivalent circuit using register "count[8]~reg0_emulated" and latch "count[8]~33" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 43
+    Warning (13310): Register "count[9]~reg0" is converted into an equivalent circuit using register "count[9]~reg0_emulated" and latch "count[9]~37" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Problema_3/ContadorRegresivo.sv Line: 43
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -435,9 +435,9 @@ Info (21057): Implemented 61 device resources after synthesis - the final resour
     Info (21059): Implemented 10 output pins
     Info (21061): Implemented 39 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4828 megabytes
-    Info: Processing ended: Tue Mar 11 22:33:22 2025
-    Info: Elapsed time: 00:00:10
+    Info: Peak virtual memory: 4831 megabytes
+    Info: Processing ended: Tue Mar 11 23:07:59 2025
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:20
 
 

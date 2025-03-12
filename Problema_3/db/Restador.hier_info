@@ -29,16 +29,16 @@ init_number[6] => count[6]~reg0.ADATA
 init_number[7] => count[7]~reg0.ADATA
 init_number[8] => count[8]~reg0.ADATA
 init_number[9] => count[9]~reg0.ADATA
-count[0] << count[0].DB_MAX_OUTPUT_PORT_TYPE
-count[1] << count[1].DB_MAX_OUTPUT_PORT_TYPE
-count[2] << count[2].DB_MAX_OUTPUT_PORT_TYPE
-count[3] << count[3].DB_MAX_OUTPUT_PORT_TYPE
-count[4] << count[4].DB_MAX_OUTPUT_PORT_TYPE
-count[5] << count[5].DB_MAX_OUTPUT_PORT_TYPE
-count[6] << count[6].DB_MAX_OUTPUT_PORT_TYPE
-count[7] << count[7].DB_MAX_OUTPUT_PORT_TYPE
-count[8] << count[8].DB_MAX_OUTPUT_PORT_TYPE
-count[9] << count[9].DB_MAX_OUTPUT_PORT_TYPE
+count[0] <= count[0].DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= count[1].DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= count[2].DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= count[3].DB_MAX_OUTPUT_PORT_TYPE
+count[4] <= count[4].DB_MAX_OUTPUT_PORT_TYPE
+count[5] <= count[5].DB_MAX_OUTPUT_PORT_TYPE
+count[6] <= count[6].DB_MAX_OUTPUT_PORT_TYPE
+count[7] <= count[7].DB_MAX_OUTPUT_PORT_TYPE
+count[8] <= count[8].DB_MAX_OUTPUT_PORT_TYPE
+count[9] <= count[9].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ContadorRegresivo|Restador:substractor[0].r1

@@ -1,3 +1,8 @@
+// Módulo Compuerta OR
+
+// Este módulo simula una compuerta OR de cuatro entradas.
+// Autor: Eduardo Bolívar Minguet
+
 module or_gate4(
 	input logic a,
 	input logic b,
