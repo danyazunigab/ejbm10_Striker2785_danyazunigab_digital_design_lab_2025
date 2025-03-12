@@ -1,6 +1,6 @@
-module testbench();
+module ContadorRegresivo_tb_2bits();
 
-	parameter N = 6;
+	parameter N = 2;
 
 	logic clk;
 	logic rst_async;
@@ -14,25 +14,19 @@ module testbench();
 		.count(count)
 	);
 
-	always #5 clk = ~clk;
+	always #100 clk = ~clk;
 
 	initial begin
 
 		clk = 0;
 		
-		init_number = 6'b100110;
+		init_number = 2'b11;
 		
 		rst_async = 0;
 		#10 rst_async = 1;
 
-		#1000;
-		
-		rst_async = 0;
-		#10 rst_async = 1;
-		
 		#100;
 
 		$stop;
 	end
 endmodule
-

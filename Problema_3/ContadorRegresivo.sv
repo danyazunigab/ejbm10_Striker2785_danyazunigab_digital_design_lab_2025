@@ -20,7 +20,7 @@ module ContadorRegresivo #(parameter N = 8) (
 		end
 	endgenerate
 	
-	always_ff @(posedge clk) begin
+	always_ff @(posedge clk or negedge rst_async) begin
 		if (!rst_async)
 			count <= init_number;
 		else if (count > 0)

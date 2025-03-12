@@ -1,4 +1,4 @@
-module testbench();
+module ContadorRegresivo_tb_6bits();
 
 	parameter N = 6;
 
@@ -14,25 +14,22 @@ module testbench();
 		.count(count)
 	);
 
-	always #5 clk = ~clk;
+	always #100 clk = ~clk;
 
 	initial begin
 
 		clk = 0;
 		
-		init_number = 6'b100110;
+		init_number = 6'b101011;
 		
 		rst_async = 0;
 		#10 rst_async = 1;
 
-		#1000;
+		#500;
 		
 		rst_async = 0;
 		#10 rst_async = 1;
-		
-		#100;
 
 		$stop;
 	end
 endmodule
-
