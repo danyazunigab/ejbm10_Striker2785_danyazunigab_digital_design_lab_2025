@@ -1,7 +1,0 @@
-vendor_name = ModelSim
-source_file = 1, Z:/devWS/TallerDD/Laboratorios/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Laboratorio1/Problema1/binary_to_bcd.sv
-source_file = 1, Z:/devWS/TallerDD/Laboratorios/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Laboratorio1/Problema1/top_module.sv
-source_file = 1, Z:/devWS/TallerDD/Laboratorios/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Laboratorio1/Problema1/seven_segment_decoder.sv
-source_file = 1, Z:/devWS/TallerDD/Laboratorios/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Laboratorio1/Problema1/binary_to_bcd_testbench.sv
-source_file = 1, Z:/devWS/TallerDD/Laboratorios/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Laboratorio1/Problema1/db/Decodificador.cbx.xml
-design_name = top_module

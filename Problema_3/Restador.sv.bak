@@ -1,3 +1,0 @@
-module Restador(input logic a, b, cin, output logic d, br);
-
-endmodule
