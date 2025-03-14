@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/simulation/modelsim
 vfull_substractor
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1742001140
+Z2 !s110 1741987859
 !i10b 1
 !s100 ]Xj;]1O@E9KS0:NOUh@@h1
 Ia=R9?aQ5G7AWXOl=?FP1z0
@@ -26,24 +26,49 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1742001139.000000
+Z5 !s108 1741987859.000000
 !s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/full_substractor.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/full_substractor.sv|
 !i113 1
-Z5 o-sv -work work
-Z6 !s92 -sv -work work +incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025
-Z7 tCvgOpt 0
-vtb
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025
+Z8 tCvgOpt 0
+vn_bit_substractor
 R1
 R2
 !i10b 1
-!s100 ^Y`kzC]1n316>TJYzlM[h0
-IkYKfgYaY_;0RV<6`<J?zO3
+!s100 20FH4Q`O:QJNU40jaOQd92
+IX86kX3dbGA>l@YTE3iIOA1
+R3
+!s105 n_bit_substractor_sv_unit
+S1
+R0
+w1741987717
+8C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_substractor.sv
+FC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_substractor.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_substractor.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_substractor.sv|
+!i113 1
+R6
+R7
+R8
+vtb
+R1
+!s110 1741987860
+!i10b 1
+!s100 A:oDo8VKB4;fdVAObl7XE2
+I4nc4AXTb>>_j3:ABO6E;z2
 R3
 !s105 tb_sv_unit
 S1
 R0
-w1742001050
+w1741987834
 8C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/tb.sv
 FC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/tb.sv
 L0 1
@@ -51,10 +76,10 @@ R4
 r1
 !s85 0
 31
-!s108 1742001140.000000
+R5
 !s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/tb.sv|
 !i113 1
-R5
 R6
 R7
+R8

@@ -1,35 +1,24 @@
 module tb();
-
-	logic A, B, Bin, D, Bout;
 	
-	full_substractor dut(
+	parameter N = 4;
+	
+	logic [N-1:0] A, B, D;
+	
+	n_bit_substractor #(.N(N)) dut(
 		.A(A),
 		.B(B),
-		.Bin(Bin),
-		.D(D),
-		.Bout(Bout)
+		.D(D)
 	);
 	
 	initial begin
-		A = 0;
-		B = 0;
-		Bin = 0;
+		A = 4'b1010;
+		B = 4'b0110;
 		
-		#100;
+		#500;
 		
-		A = 1;
-		B = 1;
+		A = 4'b0101;
+		B = 4'b1111;
 		
-		#100;
-		
-		A = 0;
-		B = 1;
-		
-		#100;
-		
-		B = 0;
-		Bin = 1;
-		
-		#100;
+		#500;
 	end
 endmodule
