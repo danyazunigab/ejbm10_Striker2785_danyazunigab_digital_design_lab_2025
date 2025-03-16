@@ -1,5 +1,5 @@
 Flow report for ALU
-Sat Mar 15 23:53:14 2025
+Sun Mar 16 00:28:45 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Sat Mar 15 23:53:14 2025       ;
+; Flow Status                 ; Successful - Sun Mar 16 00:28:45 2025       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; ALU                                         ;
 ; Top-level Entity Name       ; n_bit_multiplier                            ;
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/15/2025 23:53:06 ;
+; Start date & time ; 03/16/2025 00:28:37 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ALU                 ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+------------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name      ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+------------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 159209593829887.174210438615052        ; --            ; --               ; --             ;
+; COMPILER_SIGNATURE_ID                ; 159209593829887.174210651616372        ; --            ; --               ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --               ; tb             ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb                                     ; --            ; --               ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --               ; eda_simulation ;
@@ -100,7 +100,7 @@ refer to the applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:09     ; 1.0                     ; 4772 MB             ; 00:00:19                           ;
+; Analysis & Elaboration ; 00:00:09     ; 1.0                     ; 4776 MB             ; 00:00:19                           ;
 ; Total                  ; 00:00:09     ; --                      ; --                  ; 00:00:19                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 

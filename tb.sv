@@ -2,16 +2,12 @@ module tb();
 	
 	parameter N = 5;
 	logic [N-1:0] A, B;
-	logic [2*N-2:0] M1, M2, M3, M4, M5;
+	logic [2*N-1:0] M;
 	
 	n_bit_multiplier #(.N(N)) dut(
 		.A(A),
 		.B(B),
-		.M1(M1),
-		.M2(M2),
-		.M3(M3),
-		.M4(M4),
-		.M5(M5)
+		.M(M)
 	);
 	
 	initial begin
