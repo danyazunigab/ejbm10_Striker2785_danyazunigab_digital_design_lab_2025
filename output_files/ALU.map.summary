@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Fri Mar 14 15:30:50 2025
+Analysis & Elaboration Status : Successful - Sat Mar 15 23:53:14 2025
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : ALU
-Top-level Entity Name : n_bit_substractor
+Top-level Entity Name : n_bit_multiplier
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge
