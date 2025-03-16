@@ -10,45 +10,64 @@
 # Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025 {C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/full_substractor.sv}
+# vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025 {C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/full_adder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:30:59 on Mar 14,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025" C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/full_substractor.sv 
-# -- Compiling module full_substractor
+# Start time: 00:28:52 on Mar 16,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025" C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/full_adder.sv 
+# -- Compiling module full_adder
 # 
 # Top level modules:
-# 	full_substractor
-# End time: 15:30:59 on Mar 14,2025, Elapsed time: 0:00:00
+# 	full_adder
+# End time: 00:28:52 on Mar 16,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025 {C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_substractor.sv}
+# vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025 {C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_adder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:30:59 on Mar 14,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025" C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_substractor.sv 
-# -- Compiling module n_bit_substractor
+# Start time: 00:28:52 on Mar 16,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025" C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_adder.sv 
+# -- Compiling module n_bit_adder
 # 
 # Top level modules:
-# 	n_bit_substractor
-# End time: 15:30:59 on Mar 14,2025, Elapsed time: 0:00:00
+# 	n_bit_adder
+# End time: 00:28:52 on Mar 16,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025 {C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_multiplier.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:28:52 on Mar 16,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025" C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_multiplier.sv 
+# -- Compiling module n_bit_multiplier
+# 
+# Top level modules:
+# 	n_bit_multiplier
+# End time: 00:28:52 on Mar 16,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025 {C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:30:59 on Mar 14,2025
+# Start time: 00:28:52 on Mar 16,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025" C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/tb.sv 
 # -- Compiling module tb
 # 
 # Top level modules:
 # 	tb
-# End time: 15:31:00 on Mar 14,2025, Elapsed time: 0:00:01
+# End time: 00:28:52 on Mar 16,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb 
-# Start time: 15:31:00 on Mar 14,2025
+# Start time: 00:28:52 on Mar 16,2025
 # Loading sv_std.std
 # Loading work.tb
-# Loading work.n_bit_substractor
-# Loading work.full_substractor
+# Loading work.n_bit_multiplier
+# Loading work.n_bit_adder
+# Loading work.full_adder
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_multiplier.sv(27): [PCDPC] - Port size (9) does not match connection size (10) for port 'A'. The port definition is at: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_adder.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/dut/for3[0]/sum1 File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_adder.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_multiplier.sv(27): [PCDPC] - Port size (9) does not match connection size (10) for port 'A'. The port definition is at: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_adder.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/dut/for3[1]/sum1 File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_adder.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_multiplier.sv(27): [PCDPC] - Port size (9) does not match connection size (10) for port 'A'. The port definition is at: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_adder.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/dut/for3[2]/sum1 File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_adder.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_multiplier.sv(27): [PCDPC] - Port size (9) does not match connection size (10) for port 'A'. The port definition is at: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_adder.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/dut/for3[3]/sum1 File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_adder.sv
 # 
 # add wave *
 # view structure
@@ -56,5 +75,5 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# End time: 15:33:01 on Mar 14,2025, Elapsed time: 0:02:01
-# Errors: 0, Warnings: 0
+# End time: 00:29:34 on Mar 16,2025, Elapsed time: 0:00:42
+# Errors: 0, Warnings: 4

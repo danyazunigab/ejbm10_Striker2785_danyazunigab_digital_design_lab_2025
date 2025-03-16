@@ -1,23 +1,18 @@
 module tb();
 	
-	parameter N = 4;
+	parameter N = 5;
+	logic [N-1:0] A, B;
+	logic [2*N-1:0] M;
 	
-	logic [N-1:0] A, B, D;
-	
-	n_bit_substractor #(.N(N)) dut(
+	n_bit_multiplier #(.N(N)) dut(
 		.A(A),
 		.B(B),
-		.D(D)
+		.M(M)
 	);
 	
 	initial begin
-		A = 4'b1010;
-		B = 4'b0110;
-		
-		#500;
-		
-		A = 4'b0101;
-		B = 4'b1111;
+		A = 5'b11101;
+		B = 5'b10011;
 		
 		#500;
 	end

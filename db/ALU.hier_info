@@ -1,39 +1,2695 @@
-|ALU
-number[0] => Decoder0.IN3
-number[1] => Decoder0.IN2
-number[2] => Decoder0.IN1
-number[3] => Decoder0.IN0
-number[4] => Decoder1.IN3
-number[5] => Decoder1.IN2
-number[6] => Decoder1.IN1
-number[7] => Decoder1.IN0
-seven_seg1[0] << WideOr6.DB_MAX_OUTPUT_PORT_TYPE
-seven_seg1[1] << WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-seven_seg1[2] << WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-seven_seg1[3] << WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-seven_seg1[4] << WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-seven_seg1[5] << WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-seven_seg1[6] << WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-seven_seg2[0] << WideOr13.DB_MAX_OUTPUT_PORT_TYPE
-seven_seg2[1] << WideOr12.DB_MAX_OUTPUT_PORT_TYPE
-seven_seg2[2] << WideOr11.DB_MAX_OUTPUT_PORT_TYPE
-seven_seg2[3] << WideOr10.DB_MAX_OUTPUT_PORT_TYPE
-seven_seg2[4] << WideOr9.DB_MAX_OUTPUT_PORT_TYPE
-seven_seg2[5] << WideOr8.DB_MAX_OUTPUT_PORT_TYPE
-seven_seg2[6] << WideOr7.DB_MAX_OUTPUT_PORT_TYPE
-seven_seg3[0] << <GND>
-seven_seg3[1] << <GND>
-seven_seg3[2] << <GND>
-seven_seg3[3] << <GND>
-seven_seg3[4] << <GND>
-seven_seg3[5] << <GND>
-seven_seg3[6] << <VCC>
-seven_seg4[0] << <GND>
-seven_seg4[1] << <GND>
-seven_seg4[2] << <GND>
-seven_seg4[3] << <GND>
-seven_seg4[4] << <GND>
-seven_seg4[5] << <GND>
-seven_seg4[6] << <VCC>
+|n_bit_multiplier
+A[0] => rows.IN0
+A[0] => rows.IN0
+A[0] => rows.IN0
+A[0] => rows.IN0
+A[0] => rows.IN0
+A[0] => rows.IN0
+A[0] => rows.IN0
+A[0] => rows.IN0
+A[1] => rows.IN0
+A[1] => rows.IN0
+A[1] => rows.IN0
+A[1] => rows.IN0
+A[1] => rows.IN0
+A[1] => rows.IN0
+A[1] => rows.IN0
+A[1] => rows.IN0
+A[2] => rows.IN0
+A[2] => rows.IN0
+A[2] => rows.IN0
+A[2] => rows.IN0
+A[2] => rows.IN0
+A[2] => rows.IN0
+A[2] => rows.IN0
+A[2] => rows.IN0
+A[3] => rows.IN0
+A[3] => rows.IN0
+A[3] => rows.IN0
+A[3] => rows.IN0
+A[3] => rows.IN0
+A[3] => rows.IN0
+A[3] => rows.IN0
+A[3] => rows.IN0
+A[4] => rows.IN0
+A[4] => rows.IN0
+A[4] => rows.IN0
+A[4] => rows.IN0
+A[4] => rows.IN0
+A[4] => rows.IN0
+A[4] => rows.IN0
+A[4] => rows.IN0
+A[5] => rows.IN0
+A[5] => rows.IN0
+A[5] => rows.IN0
+A[5] => rows.IN0
+A[5] => rows.IN0
+A[5] => rows.IN0
+A[5] => rows.IN0
+A[5] => rows.IN0
+A[6] => rows.IN0
+A[6] => rows.IN0
+A[6] => rows.IN0
+A[6] => rows.IN0
+A[6] => rows.IN0
+A[6] => rows.IN0
+A[6] => rows.IN0
+A[6] => rows.IN0
+A[7] => rows.IN0
+A[7] => rows.IN0
+A[7] => rows.IN0
+A[7] => rows.IN0
+A[7] => rows.IN0
+A[7] => rows.IN0
+A[7] => rows.IN0
+A[7] => rows.IN0
+B[0] => rows.IN1
+B[0] => rows.IN1
+B[0] => rows.IN1
+B[0] => rows.IN1
+B[0] => rows.IN1
+B[0] => rows.IN1
+B[0] => rows.IN1
+B[0] => rows.IN1
+B[1] => rows.IN1
+B[1] => rows.IN1
+B[1] => rows.IN1
+B[1] => rows.IN1
+B[1] => rows.IN1
+B[1] => rows.IN1
+B[1] => rows.IN1
+B[1] => rows.IN1
+B[2] => rows.IN1
+B[2] => rows.IN1
+B[2] => rows.IN1
+B[2] => rows.IN1
+B[2] => rows.IN1
+B[2] => rows.IN1
+B[2] => rows.IN1
+B[2] => rows.IN1
+B[3] => rows.IN1
+B[3] => rows.IN1
+B[3] => rows.IN1
+B[3] => rows.IN1
+B[3] => rows.IN1
+B[3] => rows.IN1
+B[3] => rows.IN1
+B[3] => rows.IN1
+B[4] => rows.IN1
+B[4] => rows.IN1
+B[4] => rows.IN1
+B[4] => rows.IN1
+B[4] => rows.IN1
+B[4] => rows.IN1
+B[4] => rows.IN1
+B[4] => rows.IN1
+B[5] => rows.IN1
+B[5] => rows.IN1
+B[5] => rows.IN1
+B[5] => rows.IN1
+B[5] => rows.IN1
+B[5] => rows.IN1
+B[5] => rows.IN1
+B[5] => rows.IN1
+B[6] => rows.IN1
+B[6] => rows.IN1
+B[6] => rows.IN1
+B[6] => rows.IN1
+B[6] => rows.IN1
+B[6] => rows.IN1
+B[6] => rows.IN1
+B[6] => rows.IN1
+B[7] => rows.IN1
+B[7] => rows.IN1
+B[7] => rows.IN1
+B[7] => rows.IN1
+B[7] => rows.IN1
+B[7] => rows.IN1
+B[7] => rows.IN1
+B[7] => rows.IN1
+M[0] <= n_bit_adder:for3[6].sum1.S
+M[1] <= n_bit_adder:for3[6].sum1.S
+M[2] <= n_bit_adder:for3[6].sum1.S
+M[3] <= n_bit_adder:for3[6].sum1.S
+M[4] <= n_bit_adder:for3[6].sum1.S
+M[5] <= n_bit_adder:for3[6].sum1.S
+M[6] <= n_bit_adder:for3[6].sum1.S
+M[7] <= n_bit_adder:for3[6].sum1.S
+M[8] <= n_bit_adder:for3[6].sum1.S
+M[9] <= n_bit_adder:for3[6].sum1.S
+M[10] <= n_bit_adder:for3[6].sum1.S
+M[11] <= n_bit_adder:for3[6].sum1.S
+M[12] <= n_bit_adder:for3[6].sum1.S
+M[13] <= n_bit_adder:for3[6].sum1.S
+M[14] <= n_bit_adder:for3[6].sum1.S
+M[15] <= n_bit_adder:for3[6].sum1.S
+
+
+|n_bit_multiplier|n_bit_adder:for3[0].sum1
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+A[8] => A[8].IN1
+A[9] => A[9].IN1
+A[10] => A[10].IN1
+A[11] => A[11].IN1
+A[12] => A[12].IN1
+A[13] => A[13].IN1
+A[14] => A[14].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+B[8] => B[8].IN1
+B[9] => B[9].IN1
+B[10] => B[10].IN1
+B[11] => B[11].IN1
+B[12] => B[12].IN1
+B[13] => B[13].IN1
+B[14] => B[14].IN1
+S[0] <= full_adder:adder[0].u1.S
+S[1] <= full_adder:adder[1].u1.S
+S[2] <= full_adder:adder[2].u1.S
+S[3] <= full_adder:adder[3].u1.S
+S[4] <= full_adder:adder[4].u1.S
+S[5] <= full_adder:adder[5].u1.S
+S[6] <= full_adder:adder[6].u1.S
+S[7] <= full_adder:adder[7].u1.S
+S[8] <= full_adder:adder[8].u1.S
+S[9] <= full_adder:adder[9].u1.S
+S[10] <= full_adder:adder[10].u1.S
+S[11] <= full_adder:adder[11].u1.S
+S[12] <= full_adder:adder[12].u1.S
+S[13] <= full_adder:adder[13].u1.S
+S[14] <= full_adder:adder[14].u1.S
+S[15] <= full_adder:adder[14].u1.Cout
+
+
+|n_bit_multiplier|n_bit_adder:for3[0].sum1|full_adder:adder[0].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[0].sum1|full_adder:adder[1].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[0].sum1|full_adder:adder[2].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[0].sum1|full_adder:adder[3].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[0].sum1|full_adder:adder[4].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[0].sum1|full_adder:adder[5].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[0].sum1|full_adder:adder[6].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[0].sum1|full_adder:adder[7].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[0].sum1|full_adder:adder[8].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[0].sum1|full_adder:adder[9].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[0].sum1|full_adder:adder[10].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[0].sum1|full_adder:adder[11].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[0].sum1|full_adder:adder[12].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[0].sum1|full_adder:adder[13].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[0].sum1|full_adder:adder[14].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[1].sum1
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+A[8] => A[8].IN1
+A[9] => A[9].IN1
+A[10] => A[10].IN1
+A[11] => A[11].IN1
+A[12] => A[12].IN1
+A[13] => A[13].IN1
+A[14] => A[14].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+B[8] => B[8].IN1
+B[9] => B[9].IN1
+B[10] => B[10].IN1
+B[11] => B[11].IN1
+B[12] => B[12].IN1
+B[13] => B[13].IN1
+B[14] => B[14].IN1
+S[0] <= full_adder:adder[0].u1.S
+S[1] <= full_adder:adder[1].u1.S
+S[2] <= full_adder:adder[2].u1.S
+S[3] <= full_adder:adder[3].u1.S
+S[4] <= full_adder:adder[4].u1.S
+S[5] <= full_adder:adder[5].u1.S
+S[6] <= full_adder:adder[6].u1.S
+S[7] <= full_adder:adder[7].u1.S
+S[8] <= full_adder:adder[8].u1.S
+S[9] <= full_adder:adder[9].u1.S
+S[10] <= full_adder:adder[10].u1.S
+S[11] <= full_adder:adder[11].u1.S
+S[12] <= full_adder:adder[12].u1.S
+S[13] <= full_adder:adder[13].u1.S
+S[14] <= full_adder:adder[14].u1.S
+S[15] <= full_adder:adder[14].u1.Cout
+
+
+|n_bit_multiplier|n_bit_adder:for3[1].sum1|full_adder:adder[0].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[1].sum1|full_adder:adder[1].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[1].sum1|full_adder:adder[2].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[1].sum1|full_adder:adder[3].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[1].sum1|full_adder:adder[4].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[1].sum1|full_adder:adder[5].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[1].sum1|full_adder:adder[6].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[1].sum1|full_adder:adder[7].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[1].sum1|full_adder:adder[8].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[1].sum1|full_adder:adder[9].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[1].sum1|full_adder:adder[10].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[1].sum1|full_adder:adder[11].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[1].sum1|full_adder:adder[12].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[1].sum1|full_adder:adder[13].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[1].sum1|full_adder:adder[14].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[2].sum1
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+A[8] => A[8].IN1
+A[9] => A[9].IN1
+A[10] => A[10].IN1
+A[11] => A[11].IN1
+A[12] => A[12].IN1
+A[13] => A[13].IN1
+A[14] => A[14].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+B[8] => B[8].IN1
+B[9] => B[9].IN1
+B[10] => B[10].IN1
+B[11] => B[11].IN1
+B[12] => B[12].IN1
+B[13] => B[13].IN1
+B[14] => B[14].IN1
+S[0] <= full_adder:adder[0].u1.S
+S[1] <= full_adder:adder[1].u1.S
+S[2] <= full_adder:adder[2].u1.S
+S[3] <= full_adder:adder[3].u1.S
+S[4] <= full_adder:adder[4].u1.S
+S[5] <= full_adder:adder[5].u1.S
+S[6] <= full_adder:adder[6].u1.S
+S[7] <= full_adder:adder[7].u1.S
+S[8] <= full_adder:adder[8].u1.S
+S[9] <= full_adder:adder[9].u1.S
+S[10] <= full_adder:adder[10].u1.S
+S[11] <= full_adder:adder[11].u1.S
+S[12] <= full_adder:adder[12].u1.S
+S[13] <= full_adder:adder[13].u1.S
+S[14] <= full_adder:adder[14].u1.S
+S[15] <= full_adder:adder[14].u1.Cout
+
+
+|n_bit_multiplier|n_bit_adder:for3[2].sum1|full_adder:adder[0].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[2].sum1|full_adder:adder[1].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[2].sum1|full_adder:adder[2].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[2].sum1|full_adder:adder[3].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[2].sum1|full_adder:adder[4].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[2].sum1|full_adder:adder[5].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[2].sum1|full_adder:adder[6].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[2].sum1|full_adder:adder[7].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[2].sum1|full_adder:adder[8].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[2].sum1|full_adder:adder[9].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[2].sum1|full_adder:adder[10].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[2].sum1|full_adder:adder[11].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[2].sum1|full_adder:adder[12].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[2].sum1|full_adder:adder[13].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[2].sum1|full_adder:adder[14].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[3].sum1
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+A[8] => A[8].IN1
+A[9] => A[9].IN1
+A[10] => A[10].IN1
+A[11] => A[11].IN1
+A[12] => A[12].IN1
+A[13] => A[13].IN1
+A[14] => A[14].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+B[8] => B[8].IN1
+B[9] => B[9].IN1
+B[10] => B[10].IN1
+B[11] => B[11].IN1
+B[12] => B[12].IN1
+B[13] => B[13].IN1
+B[14] => B[14].IN1
+S[0] <= full_adder:adder[0].u1.S
+S[1] <= full_adder:adder[1].u1.S
+S[2] <= full_adder:adder[2].u1.S
+S[3] <= full_adder:adder[3].u1.S
+S[4] <= full_adder:adder[4].u1.S
+S[5] <= full_adder:adder[5].u1.S
+S[6] <= full_adder:adder[6].u1.S
+S[7] <= full_adder:adder[7].u1.S
+S[8] <= full_adder:adder[8].u1.S
+S[9] <= full_adder:adder[9].u1.S
+S[10] <= full_adder:adder[10].u1.S
+S[11] <= full_adder:adder[11].u1.S
+S[12] <= full_adder:adder[12].u1.S
+S[13] <= full_adder:adder[13].u1.S
+S[14] <= full_adder:adder[14].u1.S
+S[15] <= full_adder:adder[14].u1.Cout
+
+
+|n_bit_multiplier|n_bit_adder:for3[3].sum1|full_adder:adder[0].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[3].sum1|full_adder:adder[1].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[3].sum1|full_adder:adder[2].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[3].sum1|full_adder:adder[3].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[3].sum1|full_adder:adder[4].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[3].sum1|full_adder:adder[5].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[3].sum1|full_adder:adder[6].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[3].sum1|full_adder:adder[7].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[3].sum1|full_adder:adder[8].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[3].sum1|full_adder:adder[9].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[3].sum1|full_adder:adder[10].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[3].sum1|full_adder:adder[11].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[3].sum1|full_adder:adder[12].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[3].sum1|full_adder:adder[13].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[3].sum1|full_adder:adder[14].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[4].sum1
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+A[8] => A[8].IN1
+A[9] => A[9].IN1
+A[10] => A[10].IN1
+A[11] => A[11].IN1
+A[12] => A[12].IN1
+A[13] => A[13].IN1
+A[14] => A[14].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+B[8] => B[8].IN1
+B[9] => B[9].IN1
+B[10] => B[10].IN1
+B[11] => B[11].IN1
+B[12] => B[12].IN1
+B[13] => B[13].IN1
+B[14] => B[14].IN1
+S[0] <= full_adder:adder[0].u1.S
+S[1] <= full_adder:adder[1].u1.S
+S[2] <= full_adder:adder[2].u1.S
+S[3] <= full_adder:adder[3].u1.S
+S[4] <= full_adder:adder[4].u1.S
+S[5] <= full_adder:adder[5].u1.S
+S[6] <= full_adder:adder[6].u1.S
+S[7] <= full_adder:adder[7].u1.S
+S[8] <= full_adder:adder[8].u1.S
+S[9] <= full_adder:adder[9].u1.S
+S[10] <= full_adder:adder[10].u1.S
+S[11] <= full_adder:adder[11].u1.S
+S[12] <= full_adder:adder[12].u1.S
+S[13] <= full_adder:adder[13].u1.S
+S[14] <= full_adder:adder[14].u1.S
+S[15] <= full_adder:adder[14].u1.Cout
+
+
+|n_bit_multiplier|n_bit_adder:for3[4].sum1|full_adder:adder[0].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[4].sum1|full_adder:adder[1].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[4].sum1|full_adder:adder[2].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[4].sum1|full_adder:adder[3].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[4].sum1|full_adder:adder[4].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[4].sum1|full_adder:adder[5].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[4].sum1|full_adder:adder[6].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[4].sum1|full_adder:adder[7].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[4].sum1|full_adder:adder[8].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[4].sum1|full_adder:adder[9].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[4].sum1|full_adder:adder[10].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[4].sum1|full_adder:adder[11].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[4].sum1|full_adder:adder[12].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[4].sum1|full_adder:adder[13].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[4].sum1|full_adder:adder[14].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[5].sum1
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+A[8] => A[8].IN1
+A[9] => A[9].IN1
+A[10] => A[10].IN1
+A[11] => A[11].IN1
+A[12] => A[12].IN1
+A[13] => A[13].IN1
+A[14] => A[14].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+B[8] => B[8].IN1
+B[9] => B[9].IN1
+B[10] => B[10].IN1
+B[11] => B[11].IN1
+B[12] => B[12].IN1
+B[13] => B[13].IN1
+B[14] => B[14].IN1
+S[0] <= full_adder:adder[0].u1.S
+S[1] <= full_adder:adder[1].u1.S
+S[2] <= full_adder:adder[2].u1.S
+S[3] <= full_adder:adder[3].u1.S
+S[4] <= full_adder:adder[4].u1.S
+S[5] <= full_adder:adder[5].u1.S
+S[6] <= full_adder:adder[6].u1.S
+S[7] <= full_adder:adder[7].u1.S
+S[8] <= full_adder:adder[8].u1.S
+S[9] <= full_adder:adder[9].u1.S
+S[10] <= full_adder:adder[10].u1.S
+S[11] <= full_adder:adder[11].u1.S
+S[12] <= full_adder:adder[12].u1.S
+S[13] <= full_adder:adder[13].u1.S
+S[14] <= full_adder:adder[14].u1.S
+S[15] <= full_adder:adder[14].u1.Cout
+
+
+|n_bit_multiplier|n_bit_adder:for3[5].sum1|full_adder:adder[0].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[5].sum1|full_adder:adder[1].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[5].sum1|full_adder:adder[2].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[5].sum1|full_adder:adder[3].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[5].sum1|full_adder:adder[4].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[5].sum1|full_adder:adder[5].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[5].sum1|full_adder:adder[6].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[5].sum1|full_adder:adder[7].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[5].sum1|full_adder:adder[8].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[5].sum1|full_adder:adder[9].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[5].sum1|full_adder:adder[10].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[5].sum1|full_adder:adder[11].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[5].sum1|full_adder:adder[12].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[5].sum1|full_adder:adder[13].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[5].sum1|full_adder:adder[14].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[6].sum1
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+A[8] => A[8].IN1
+A[9] => A[9].IN1
+A[10] => A[10].IN1
+A[11] => A[11].IN1
+A[12] => A[12].IN1
+A[13] => A[13].IN1
+A[14] => A[14].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+B[8] => B[8].IN1
+B[9] => B[9].IN1
+B[10] => B[10].IN1
+B[11] => B[11].IN1
+B[12] => B[12].IN1
+B[13] => B[13].IN1
+B[14] => B[14].IN1
+S[0] <= full_adder:adder[0].u1.S
+S[1] <= full_adder:adder[1].u1.S
+S[2] <= full_adder:adder[2].u1.S
+S[3] <= full_adder:adder[3].u1.S
+S[4] <= full_adder:adder[4].u1.S
+S[5] <= full_adder:adder[5].u1.S
+S[6] <= full_adder:adder[6].u1.S
+S[7] <= full_adder:adder[7].u1.S
+S[8] <= full_adder:adder[8].u1.S
+S[9] <= full_adder:adder[9].u1.S
+S[10] <= full_adder:adder[10].u1.S
+S[11] <= full_adder:adder[11].u1.S
+S[12] <= full_adder:adder[12].u1.S
+S[13] <= full_adder:adder[13].u1.S
+S[14] <= full_adder:adder[14].u1.S
+S[15] <= full_adder:adder[14].u1.Cout
+
+
+|n_bit_multiplier|n_bit_adder:for3[6].sum1|full_adder:adder[0].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[6].sum1|full_adder:adder[1].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[6].sum1|full_adder:adder[2].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[6].sum1|full_adder:adder[3].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[6].sum1|full_adder:adder[4].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[6].sum1|full_adder:adder[5].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[6].sum1|full_adder:adder[6].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[6].sum1|full_adder:adder[7].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[6].sum1|full_adder:adder[8].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[6].sum1|full_adder:adder[9].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[6].sum1|full_adder:adder[10].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[6].sum1|full_adder:adder[11].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[6].sum1|full_adder:adder[12].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[6].sum1|full_adder:adder[13].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_multiplier|n_bit_adder:for3[6].sum1|full_adder:adder[14].u1
+A => and3.IN0
+A => and7.IN0
+A => and6.IN0
+A => and1.IN0
+A => and2.IN0
+B => and2.IN1
+B => and7.IN1
+B => and5.IN0
+B => and1.IN1
+B => and3.IN1
+Cin => and1.IN1
+Cin => and4.IN1
+Cin => and5.IN1
+Cin => and6.IN1
+Cin => and2.IN1
+Cin => and3.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
