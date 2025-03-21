@@ -1,9 +1,9 @@
 `timescale 10ns/1ns
-module shiftRightNbits_tb();
+module ShiftRightNBits_tb();
 
 logic [3:0] a, b, shamt;
 
-shiftRightNbits #(4) test (a, shamt, b);
+ShiftRightNBits #(4) test (a, shamt, b);
 
 initial begin
 

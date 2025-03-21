@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSXFC6D6F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY ALU
+set_global_assignment -name TOP_LEVEL_ENTITY n_bit_adder
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:08:25  MARCH 14, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -56,17 +56,6 @@ set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH tb -section_id 
 set_global_assignment -name EDA_TEST_BENCH_NAME tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb -section_id tb
-set_global_assignment -name EDA_TEST_BENCH_FILE tb.sv -section_id tb
-set_global_assignment -name SYSTEMVERILOG_FILE ALU.sv
-set_global_assignment -name SYSTEMVERILOG_FILE full_adder.sv
-set_global_assignment -name SYSTEMVERILOG_FILE tb.sv
-set_global_assignment -name SYSTEMVERILOG_FILE full_substractor.sv
-set_global_assignment -name SYSTEMVERILOG_FILE n_bit_adder.sv
-set_global_assignment -name SYSTEMVERILOG_FILE n_bit_substractor.sv
-set_global_assignment -name SYSTEMVERILOG_FILE n_bit_multiplier.sv
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_AB28 -to number[0]
 set_location_assignment PIN_AC30 -to number[1]
 set_location_assignment PIN_W25 -to number[2]
@@ -103,4 +92,29 @@ set_location_assignment PIN_AA20 -to seven_seg4[3]
 set_location_assignment PIN_AC20 -to seven_seg4[4]
 set_location_assignment PIN_AA19 -to seven_seg4[5]
 set_location_assignment PIN_AD20 -to seven_seg4[6]
+set_global_assignment -name SYSTEMVERILOG_FILE ShiftRightNBits_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ShiftRightNBits.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ShiftLeftNBits_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ShiftLeftNBits.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Shift1Bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ALU.sv
+set_global_assignment -name SYSTEMVERILOG_FILE full_adder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE full_substractor.sv
+set_global_assignment -name SYSTEMVERILOG_FILE n_bit_adder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE n_bit_substractor.sv
+set_global_assignment -name SYSTEMVERILOG_FILE n_bit_multiplier.sv
+set_global_assignment -name EDA_TEST_BENCH_NAME ShiftRightNBit_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ShiftRightNBit_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ShiftRightNBit_tb -section_id ShiftRightNBit_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME ShiftLeftNBit_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ShiftLeftNBit_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ShiftLeftNBit_tb -section_id ShiftLeftNBit_tb
+set_global_assignment -name SYSTEMVERILOG_FILE n_bit_and.sv
+set_global_assignment -name EDA_TEST_BENCH_FILE tb.sv -section_id tb
+set_global_assignment -name EDA_TEST_BENCH_FILE ShiftRightNBits_tb.sv -section_id ShiftRightNBit_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE ShiftLeftNBits_tb.sv -section_id ShiftLeftNBit_tb
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

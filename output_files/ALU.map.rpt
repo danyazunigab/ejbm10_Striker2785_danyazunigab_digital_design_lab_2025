@@ -1,5 +1,5 @@
-Analysis & Synthesis report for ALU
-Sun Mar 16 01:04:21 2025
+Analysis & Elaboration report for ALU
+Fri Mar 21 15:18:25 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -7,17 +7,12 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |ALU
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: Top-level Entity: |n_bit_adder
+  5. Analysis & Elaboration Settings
+  6. Port Connectivity Checks: "full_adder:adder[0].u1"
+  7. Analysis & Elaboration Messages
 
 
 
@@ -40,36 +35,57 @@ refer to the applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Mar 16 01:04:21 2025       ;
-; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name                   ; ALU                                         ;
-; Top-level Entity Name           ; ALU                                         ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 36                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Fri Mar 21 15:18:25 2025       ;
+; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                 ; ALU                                         ;
+; Top-level Entity Name         ; n_bit_adder                                 ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |n_bit_adder ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; N              ; 8     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
+; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
-; Top-level entity name                                                           ; ALU                ; ALU                ;
+; Top-level entity name                                                           ; n_bit_adder        ; ALU                ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -150,133 +166,39 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++----------------------------------------------------+
+; Port Connectivity Checks: "full_adder:adder[0].u1" ;
++------+-------+----------+--------------------------+
+; Port ; Type  ; Severity ; Details                  ;
++------+-------+----------+--------------------------+
+; Cin  ; Input ; Info     ; Stuck at GND             ;
++------+-------+----------+--------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                       ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                   ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
-; ALU.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
-
-
-+---------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                   ;
-+---------------------------------------------+-----------------+
-; Resource                                    ; Usage           ;
-+---------------------------------------------+-----------------+
-; Estimate of Logic utilization (ALMs needed) ; 7               ;
-;                                             ;                 ;
-; Combinational ALUT usage for logic          ; 14              ;
-;     -- 7 input functions                    ; 0               ;
-;     -- 6 input functions                    ; 0               ;
-;     -- 5 input functions                    ; 0               ;
-;     -- 4 input functions                    ; 14              ;
-;     -- <=3 input functions                  ; 0               ;
-;                                             ;                 ;
-; Dedicated logic registers                   ; 0               ;
-;                                             ;                 ;
-; I/O pins                                    ; 36              ;
-;                                             ;                 ;
-; Total DSP Blocks                            ; 0               ;
-;                                             ;                 ;
-; Maximum fan-out node                        ; number[0]~input ;
-; Maximum fan-out                             ; 7               ;
-; Total fan-out                               ; 106             ;
-; Average fan-out                             ; 1.23            ;
-+---------------------------------------------+-----------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |ALU                       ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 36   ; 0            ; |ALU                ; ALU         ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |ALU ;
-+----------------+-------+--------------------------------------------+
-; Parameter Name ; Value ; Type                                       ;
-+----------------+-------+--------------------------------------------+
-; N              ; 8     ; Signed Integer                             ;
-+----------------+-------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 18                          ;
-;     normal            ; 18                          ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 2                           ;
-;         4 data inputs ; 14                          ;
-; boundary_port         ; 36                          ;
-;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.38                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Mar 16 01:04:12 2025
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
+    Info: Processing started: Fri Mar 21 15:18:14 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
-    Info (12023): Found entity 1: ALU File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shiftrightnbits_tb.sv
+    Info (12023): Found entity 1: ShiftRightNBits_tb File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ShiftRightNBits_tb.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file shiftrightnbits.sv
+    Info (12023): Found entity 1: ShiftRightNBits File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ShiftRightNBits.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shiftleftnbits_tb.sv
+    Info (12023): Found entity 1: shiftLeftNbits_tb File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ShiftLeftNBits_tb.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file shiftleftnbits.sv
+    Info (12023): Found entity 1: shiftLeftNbits File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ShiftLeftNBits.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shift1bit.sv
+    Info (12023): Found entity 1: shift1bit File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Shift1Bit.sv Line: 1
+Warning (12019): Can't analyze file -- file ALU.sv is missing
 Info (12021): Found 1 design units, including 1 entities, in source file full_adder.sv
     Info (12023): Found entity 1: full_adder File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/full_adder.sv Line: 1
+Warning (10229): Verilog HDL Expression warning at tb.sv(13): truncated literal to match 5 bits File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/tb.sv Line: 13
 Info (12021): Found 1 design units, including 1 entities, in source file tb.sv
     Info (12023): Found entity 1: tb File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file full_substractor.sv
@@ -285,35 +207,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file n_bit_a
     Info (12023): Found entity 1: n_bit_adder File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file n_bit_substractor.sv
     Info (12023): Found entity 1: n_bit_substractor File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_substractor.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file n_bit_multiplier.sv
-    Info (12023): Found entity 1: n_bit_multiplier File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_multiplier.sv Line: 1
-Info (12127): Elaborating entity "ALU" for the top level hierarchy
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "seven_seg3[0]" is stuck at GND File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 5
-    Warning (13410): Pin "seven_seg3[1]" is stuck at GND File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 5
-    Warning (13410): Pin "seven_seg3[2]" is stuck at GND File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 5
-    Warning (13410): Pin "seven_seg3[3]" is stuck at GND File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 5
-    Warning (13410): Pin "seven_seg3[4]" is stuck at GND File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 5
-    Warning (13410): Pin "seven_seg3[5]" is stuck at GND File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 5
-    Warning (13410): Pin "seven_seg3[6]" is stuck at VCC File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 5
-    Warning (13410): Pin "seven_seg4[0]" is stuck at GND File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 7
-    Warning (13410): Pin "seven_seg4[1]" is stuck at GND File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 7
-    Warning (13410): Pin "seven_seg4[2]" is stuck at GND File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 7
-    Warning (13410): Pin "seven_seg4[3]" is stuck at GND File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 7
-    Warning (13410): Pin "seven_seg4[4]" is stuck at GND File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 7
-    Warning (13410): Pin "seven_seg4[5]" is stuck at GND File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 7
-    Warning (13410): Pin "seven_seg4[6]" is stuck at VCC File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 7
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 50 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 8 input pins
-    Info (21059): Implemented 28 output pins
-    Info (21061): Implemented 14 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 4821 megabytes
-    Info: Processing ended: Sun Mar 16 01:04:21 2025
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:21
+Warning (12019): Can't analyze file -- file n_bit_multiplier.sv is missing
+Info (12021): Found 1 design units, including 1 entities, in source file n_bit_and.sv
+    Info (12023): Found entity 1: n_bit_and File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_and.sv Line: 1
+Info (12127): Elaborating entity "n_bit_adder" for the top level hierarchy
+Info (12128): Elaborating entity "full_adder" for hierarchy "full_adder:adder[0].u1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_adder.sv Line: 19
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4771 megabytes
+    Info: Processing ended: Fri Mar 21 15:18:25 2025
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:27
 
 
