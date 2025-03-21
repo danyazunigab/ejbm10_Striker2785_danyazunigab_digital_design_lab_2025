@@ -1,0 +1,7 @@
+module seven_seg_decoder #(parameter N = 8)(
+	input logic [N-1:0] number,
+	output logic [6:0] seven_seg1,
+	output logic [6:0] seven_seg2,
+	output logic [6:0] seven_seg3,
+	output logic [6:0] seven_seg4,
+);
