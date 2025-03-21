@@ -97,7 +97,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE ShiftRightNBits.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ShiftLeftNBits_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ShiftLeftNBits.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Shift1Bit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ALU.sv
 set_global_assignment -name SYSTEMVERILOG_FILE full_adder.sv
 set_global_assignment -name SYSTEMVERILOG_FILE tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE full_substractor.sv
@@ -114,7 +113,9 @@ set_global_assignment -name SYSTEMVERILOG_FILE n_bit_and.sv
 set_global_assignment -name EDA_TEST_BENCH_FILE tb.sv -section_id tb
 set_global_assignment -name EDA_TEST_BENCH_FILE ShiftRightNBits_tb.sv -section_id ShiftRightNBit_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE ShiftLeftNBits_tb.sv -section_id ShiftLeftNBit_tb
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity n_bit_adder -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity n_bit_adder -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -entity n_bit_adder -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE ALU.sv
+set_global_assignment -name SYSTEMVERILOG_FILE seven_seg_decoder.sv
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity n_bit_adder -section_id Top
