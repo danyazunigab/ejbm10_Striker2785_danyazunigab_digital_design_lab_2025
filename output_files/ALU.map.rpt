@@ -1,5 +1,5 @@
 Analysis & Elaboration report for ALU
-Fri Mar 21 15:07:44 2025
+Fri Mar 21 18:02:09 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -9,11 +9,10 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: Top-level Entity: |n_bit_adder
+  4. Parameter Settings for User Entity Instance: Top-level Entity: |ALU
   5. Analysis & Elaboration Settings
-  6. Port Connectivity Checks: "full_adder:adder[0].u1"
-  7. Analysis & Elaboration Messages
-  8. Analysis & Elaboration Suppressed Messages
+  6. Analysis & Elaboration Messages
+  7. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -39,10 +38,10 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Fri Mar 21 15:07:44 2025       ;
+; Analysis & Elaboration Status ; Successful - Fri Mar 21 18:02:09 2025       ;
 ; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                 ; ALU                                         ;
-; Top-level Entity Name         ; n_bit_adder                                 ;
+; Top-level Entity Name         ; ALU                                         ;
 ; Family                        ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
 ; Total registers               ; N/A until Partition Merge                   ;
@@ -70,13 +69,13 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |n_bit_adder ;
-+----------------+-------+----------------------------------------------------+
-; Parameter Name ; Value ; Type                                               ;
-+----------------+-------+----------------------------------------------------+
-; N              ; 8     ; Signed Integer                                     ;
-+----------------+-------+----------------------------------------------------+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |ALU ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; N              ; 8     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -86,7 +85,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
-; Top-level entity name                                                           ; n_bit_adder        ; ALU                ;
+; Top-level entity name                                                           ; ALU                ; ALU                ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -167,33 +166,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+----------------------------------------------------+
-; Port Connectivity Checks: "full_adder:adder[0].u1" ;
-+------+-------+----------+--------------------------+
-; Port ; Type  ; Severity ; Details                  ;
-+------+-------+----------+--------------------------+
-; Cin  ; Input ; Info     ; Stuck at GND             ;
-+------+-------+----------+--------------------------+
-
-
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Mar 21 15:07:32 2025
+    Info: Processing started: Fri Mar 21 18:02:00 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Warning (12019): Can't analyze file -- file ShiftRightNBits_tb.sv is missing
-Warning (12019): Can't analyze file -- file ShiftRightNBits.sv is missing
-Warning (12019): Can't analyze file -- file ShiftLeftNBits_tb.sv is missing
-Warning (12019): Can't analyze file -- file ShiftLeftNBits.sv is missing
-Warning (12019): Can't analyze file -- file Shift1Bit.sv is missing
+Info (12021): Found 1 design units, including 1 entities, in source file shiftrightnbits_tb.sv
+    Info (12023): Found entity 1: ShiftRightNBits_tb File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ShiftRightNBits_tb.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file shiftrightnbits.sv
+    Info (12023): Found entity 1: ShiftRightNBits File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ShiftRightNBits.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shiftleftnbits_tb.sv
+    Info (12023): Found entity 1: shiftLeftNbits_tb File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ShiftLeftNBits_tb.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file shiftleftnbits.sv
+    Info (12023): Found entity 1: shiftLeftNbits File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ShiftLeftNBits.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shift1bit.sv
+    Info (12023): Found entity 1: shift1bit File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Shift1Bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file full_adder.sv
     Info (12023): Found entity 1: full_adder File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/full_adder.sv Line: 1
-Warning (10229): Verilog HDL Expression warning at tb.sv(13): truncated literal to match 5 bits File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/tb.sv Line: 13
 Info (12021): Found 1 design units, including 1 entities, in source file tb.sv
     Info (12023): Found entity 1: tb File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file full_substractor.sv
@@ -203,18 +197,27 @@ Info (12021): Found 1 design units, including 1 entities, in source file n_bit_a
 Info (12021): Found 1 design units, including 1 entities, in source file n_bit_substractor.sv
     Info (12023): Found entity 1: n_bit_substractor File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_substractor.sv Line: 1
 Warning (12019): Can't analyze file -- file n_bit_multiplier.sv is missing
-Warning (12019): Can't analyze file -- file n_bit_and.sv is missing
-Info (12021): Found 0 design units, including 0 entities, in source file alu.sv
+Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
+    Info (12023): Found entity 1: ALU File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file seven_seg_decoder.sv
     Info (12023): Found entity 1: seven_seg_decoder File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/seven_seg_decoder.sv Line: 1
-Info (12127): Elaborating entity "n_bit_adder" for the top level hierarchy
-Info (12128): Elaborating entity "full_adder" for hierarchy "full_adder:adder[0].u1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_adder.sv Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file n_bit_and.sv
+    Info (12023): Found entity 1: n_bit_and File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_and.sv Line: 1
+Info (12127): Elaborating entity "ALU" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at ALU.sv(16): object "load2" assigned a value but never read File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 16
+Warning (10036): Verilog HDL or VHDL warning at ALU.sv(17): object "first_number" assigned a value but never read File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 17
+Warning (10036): Verilog HDL or VHDL warning at ALU.sv(18): object "second_number" assigned a value but never read File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 18
+Warning (10034): Output port "segs1" at ALU.sv(10) has no driver File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 10
+Warning (10034): Output port "segs2" at ALU.sv(11) has no driver File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 11
+Warning (10034): Output port "segs3" at ALU.sv(12) has no driver File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 12
+Warning (10034): Output port "segs4" at ALU.sv(14) has no driver File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 14
+Warning (12158): Entity "ALU" contains only dangling pins
 Info (144001): Generated suppressed messages file C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/output_files/ALU.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4773 megabytes
-    Info: Processing ended: Fri Mar 21 15:07:44 2025
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:27
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 4771 megabytes
+    Info: Processing ended: Fri Mar 21 18:02:09 2025
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:20
 
 
 +--------------------------------------------+

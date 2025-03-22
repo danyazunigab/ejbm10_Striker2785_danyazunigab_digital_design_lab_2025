@@ -1,196 +1,46 @@
-|n_bit_adder
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-A[4] => A[4].IN1
-A[5] => A[5].IN1
-A[6] => A[6].IN1
-A[7] => A[7].IN1
-B[0] => B[0].IN1
-B[1] => B[1].IN1
-B[2] => B[2].IN1
-B[3] => B[3].IN1
-B[4] => B[4].IN1
-B[5] => B[5].IN1
-B[6] => B[6].IN1
-B[7] => B[7].IN1
-S[0] << full_adder:adder[0].u1.S
-S[1] << full_adder:adder[1].u1.S
-S[2] << full_adder:adder[2].u1.S
-S[3] << full_adder:adder[3].u1.S
-S[4] << full_adder:adder[4].u1.S
-S[5] << full_adder:adder[5].u1.S
-S[6] << full_adder:adder[6].u1.S
-S[7] << full_adder:adder[7].u1.S
-S[8] << full_adder:adder[7].u1.Cout
-
-
-|n_bit_adder|full_adder:adder[0].u1
-A => and3.IN0
-A => and7.IN0
-A => and6.IN0
-A => and1.IN0
-A => and2.IN0
-B => and2.IN1
-B => and7.IN1
-B => and5.IN0
-B => and1.IN1
-B => and3.IN1
-Cin => and1.IN1
-Cin => and4.IN1
-Cin => and5.IN1
-Cin => and6.IN1
-Cin => and2.IN1
-Cin => and3.IN1
-S <= S.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|n_bit_adder|full_adder:adder[1].u1
-A => and3.IN0
-A => and7.IN0
-A => and6.IN0
-A => and1.IN0
-A => and2.IN0
-B => and2.IN1
-B => and7.IN1
-B => and5.IN0
-B => and1.IN1
-B => and3.IN1
-Cin => and1.IN1
-Cin => and4.IN1
-Cin => and5.IN1
-Cin => and6.IN1
-Cin => and2.IN1
-Cin => and3.IN1
-S <= S.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|n_bit_adder|full_adder:adder[2].u1
-A => and3.IN0
-A => and7.IN0
-A => and6.IN0
-A => and1.IN0
-A => and2.IN0
-B => and2.IN1
-B => and7.IN1
-B => and5.IN0
-B => and1.IN1
-B => and3.IN1
-Cin => and1.IN1
-Cin => and4.IN1
-Cin => and5.IN1
-Cin => and6.IN1
-Cin => and2.IN1
-Cin => and3.IN1
-S <= S.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|n_bit_adder|full_adder:adder[3].u1
-A => and3.IN0
-A => and7.IN0
-A => and6.IN0
-A => and1.IN0
-A => and2.IN0
-B => and2.IN1
-B => and7.IN1
-B => and5.IN0
-B => and1.IN1
-B => and3.IN1
-Cin => and1.IN1
-Cin => and4.IN1
-Cin => and5.IN1
-Cin => and6.IN1
-Cin => and2.IN1
-Cin => and3.IN1
-S <= S.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|n_bit_adder|full_adder:adder[4].u1
-A => and3.IN0
-A => and7.IN0
-A => and6.IN0
-A => and1.IN0
-A => and2.IN0
-B => and2.IN1
-B => and7.IN1
-B => and5.IN0
-B => and1.IN1
-B => and3.IN1
-Cin => and1.IN1
-Cin => and4.IN1
-Cin => and5.IN1
-Cin => and6.IN1
-Cin => and2.IN1
-Cin => and3.IN1
-S <= S.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|n_bit_adder|full_adder:adder[5].u1
-A => and3.IN0
-A => and7.IN0
-A => and6.IN0
-A => and1.IN0
-A => and2.IN0
-B => and2.IN1
-B => and7.IN1
-B => and5.IN0
-B => and1.IN1
-B => and3.IN1
-Cin => and1.IN1
-Cin => and4.IN1
-Cin => and5.IN1
-Cin => and6.IN1
-Cin => and2.IN1
-Cin => and3.IN1
-S <= S.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|n_bit_adder|full_adder:adder[6].u1
-A => and3.IN0
-A => and7.IN0
-A => and6.IN0
-A => and1.IN0
-A => and2.IN0
-B => and2.IN1
-B => and7.IN1
-B => and5.IN0
-B => and1.IN1
-B => and3.IN1
-Cin => and1.IN1
-Cin => and4.IN1
-Cin => and5.IN1
-Cin => and6.IN1
-Cin => and2.IN1
-Cin => and3.IN1
-S <= S.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|n_bit_adder|full_adder:adder[7].u1
-A => and3.IN0
-A => and7.IN0
-A => and6.IN0
-A => and1.IN0
-A => and2.IN0
-B => and2.IN1
-B => and7.IN1
-B => and5.IN0
-B => and1.IN1
-B => and3.IN1
-Cin => and1.IN1
-Cin => and4.IN1
-Cin => and5.IN1
-Cin => and6.IN1
-Cin => and2.IN1
-Cin => and3.IN1
-S <= S.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+|ALU
+clk => ~NO_FANOUT~
+number[0] => ~NO_FANOUT~
+number[1] => ~NO_FANOUT~
+number[2] => ~NO_FANOUT~
+number[3] => ~NO_FANOUT~
+number[4] => ~NO_FANOUT~
+number[5] => ~NO_FANOUT~
+number[6] => ~NO_FANOUT~
+number[7] => ~NO_FANOUT~
+mux1 => ~NO_FANOUT~
+mux2 => ~NO_FANOUT~
+op1 => ~NO_FANOUT~
+op2 => ~NO_FANOUT~
+op3 => ~NO_FANOUT~
+eq => ~NO_FANOUT~
+segs1[0] <= <GND>
+segs1[1] <= <GND>
+segs1[2] <= <GND>
+segs1[3] <= <GND>
+segs1[4] <= <GND>
+segs1[5] <= <GND>
+segs1[6] <= <GND>
+segs2[0] <= <GND>
+segs2[1] <= <GND>
+segs2[2] <= <GND>
+segs2[3] <= <GND>
+segs2[4] <= <GND>
+segs2[5] <= <GND>
+segs2[6] <= <GND>
+segs3[0] <= <GND>
+segs3[1] <= <GND>
+segs3[2] <= <GND>
+segs3[3] <= <GND>
+segs3[4] <= <GND>
+segs3[5] <= <GND>
+segs3[6] <= <GND>
+segs4[0] <= <GND>
+segs4[1] <= <GND>
+segs4[2] <= <GND>
+segs4[3] <= <GND>
+segs4[4] <= <GND>
+segs4[5] <= <GND>
+segs4[6] <= <GND>
 
 

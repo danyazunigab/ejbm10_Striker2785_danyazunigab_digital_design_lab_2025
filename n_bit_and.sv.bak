@@ -7,7 +7,7 @@ module n_bit_and #(parameter N = 8) (
 	generate
 		genvar i;
 		for (i = 0; i < N; i++) begin : and_i
-			assign Y[i] = A[i] & B[i];
+			Y[i] = A[i] & B[i];
 		end
 	endgenerate
 	

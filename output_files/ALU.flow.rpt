@@ -1,5 +1,5 @@
 Flow report for ALU
-Fri Mar 21 15:07:44 2025
+Fri Mar 21 18:02:09 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,10 +40,10 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Fri Mar 21 15:07:44 2025       ;
+; Flow Status                 ; Successful - Fri Mar 21 18:02:09 2025       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; ALU                                         ;
-; Top-level Entity Name       ; n_bit_adder                                 ;
+; Top-level Entity Name       ; ALU                                         ;
 ; Family                      ; Cyclone V                                   ;
 ; Device                      ; 5CSXFC6D6F31C6                              ;
 ; Timing Models               ; Final                                       ;
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/21/2025 15:07:33 ;
+; Start date & time ; 03/21/2025 18:02:01 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ALU                 ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+-------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-------------------+
-; COMPILER_SIGNATURE_ID                ; 159209593829887.174259125309096        ; --            ; --          ; --                ;
+; COMPILER_SIGNATURE_ID                ; 159209593829887.174260172003440        ; --            ; --          ; --                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; ShiftRightNBit_tb ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; ShiftLeftNBit_tb  ;
@@ -93,13 +93,12 @@ refer to the applicable agreement for further details.
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation    ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --                ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --                ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; n_bit_adder ; Top               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; n_bit_adder ; Top               ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; n_bit_adder ; Top               ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; --          ; Top               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; --          ; Top               ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; --          ; Top               ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --                ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --                ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --                ;
-; TOP_LEVEL_ENTITY                     ; n_bit_adder                            ; ALU           ; --          ; --                ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-------------------+
 
 
@@ -108,8 +107,8 @@ refer to the applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:12     ; 1.0                     ; 4773 MB             ; 00:00:26                           ;
-; Total                  ; 00:00:12     ; --                      ; --                  ; 00:00:26                           ;
+; Analysis & Elaboration ; 00:00:09     ; 1.0                     ; 4771 MB             ; 00:00:20                           ;
+; Total                  ; 00:00:09     ; --                      ; --                  ; 00:00:20                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
