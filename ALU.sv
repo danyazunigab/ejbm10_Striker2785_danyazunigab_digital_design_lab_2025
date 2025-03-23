@@ -1,4 +1,4 @@
-module ALU #(parameter N = 8) (
+module ALU #(parameter N = 4) (
 	input logic clk,
 	input logic [N-1:0] number,
 	input logic mux1,
@@ -19,8 +19,6 @@ module ALU #(parameter N = 8) (
 	
 	assign load1 = 0;
 	assign load2 = 0;
-	
-	logic [] operations;
 	
 	always_ff @(posedge clk) begin
 		if (op1) begin

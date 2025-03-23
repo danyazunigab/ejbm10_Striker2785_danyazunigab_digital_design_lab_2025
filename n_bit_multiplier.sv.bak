@@ -1,0 +1,32 @@
+module n_bit_multiplier #(parameter N = 4) (
+	input logic [N-1:0] A,
+	input logic [N-1:0] B,
+	output logic [2*N-1:0] M
+);
+	
+	logic [2*N-1:0] partial_sums [N-2:0];
+	logic [2*N-2:0] rows [N-1:0];
+	
+	generate
+		genvar i, j;
+		for (i = 0; i < N; i++) begin : loop1
+			for (j = 0; j < 2*N-1; j++) begin : loop2
+				if (j < i || j > i + N - 1)
+					assign rows[i][j] = 0;
+				else
+					assign rows[i][j] = A[j] & B[i];
+			end
+		end
+	endgenerate
+	
+	generate
+		genvar i;
+		for (i = 0; i < N - 1; i++) begin : loop3
+			n_bit_adder s1 #(.N(2*N-2)) (
+				.A((i == 0) ? rows[i] : partial_sums[i]),
+				.B(rows[i + 1]),
+				.S((i == N - 2) ? M : partial_sums[i])
+			);
+		end
+	endgenerate
+endmodule

@@ -1,5 +1,5 @@
 Flow report for ALU
-Fri Mar 21 18:02:09 2025
+Sun Mar 23 11:31:06 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,10 +40,10 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Fri Mar 21 18:02:09 2025       ;
+; Flow Status                 ; Successful - Sun Mar 23 11:31:06 2025       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; ALU                                         ;
-; Top-level Entity Name       ; ALU                                         ;
+; Top-level Entity Name       ; n_bit_multiplier                            ;
 ; Family                      ; Cyclone V                                   ;
 ; Device                      ; 5CSXFC6D6F31C6                              ;
 ; Timing Models               ; Final                                       ;
@@ -62,44 +62,45 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/21/2025 18:02:01 ;
+; Start date & time ; 03/23/2025 11:30:54 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ALU                 ;
 +-------------------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                ;
-+--------------------------------------+----------------------------------------+---------------+-------------+-------------------+
-; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id        ;
-+--------------------------------------+----------------------------------------+---------------+-------------+-------------------+
-; COMPILER_SIGNATURE_ID                ; 159209593829887.174260172003440        ; --            ; --          ; --                ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb                ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; ShiftRightNBit_tb ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; ShiftLeftNBit_tb  ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb                                     ; --            ; --          ; eda_simulation    ;
-; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation    ;
-; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (SystemVerilog)        ; <None>        ; --          ; --                ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation    ;
-; EDA_TEST_BENCH_FILE                  ; tb.sv                                  ; --            ; --          ; tb                ;
-; EDA_TEST_BENCH_FILE                  ; ShiftRightNBits_tb.sv                  ; --            ; --          ; ShiftRightNBit_tb ;
-; EDA_TEST_BENCH_FILE                  ; ShiftLeftNBits_tb.sv                   ; --            ; --          ; ShiftLeftNBit_tb  ;
-; EDA_TEST_BENCH_MODULE_NAME           ; tb                                     ; --            ; --          ; tb                ;
-; EDA_TEST_BENCH_MODULE_NAME           ; ShiftRightNBit_tb                      ; --            ; --          ; ShiftRightNBit_tb ;
-; EDA_TEST_BENCH_MODULE_NAME           ; ShiftLeftNBit_tb                       ; --            ; --          ; ShiftLeftNBit_tb  ;
-; EDA_TEST_BENCH_NAME                  ; tb                                     ; --            ; --          ; eda_simulation    ;
-; EDA_TEST_BENCH_NAME                  ; ShiftRightNBit_tb                      ; --            ; --          ; eda_simulation    ;
-; EDA_TEST_BENCH_NAME                  ; ShiftLeftNBit_tb                       ; --            ; --          ; eda_simulation    ;
-; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation    ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --                ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --                ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; --          ; Top               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; --          ; Top               ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; --          ; Top               ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --                ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --                ;
-; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --                ;
-+--------------------------------------+----------------------------------------+---------------+-------------+-------------------+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                     ;
++--------------------------------------+----------------------------------------+---------------+------------------+-------------------+
+; Assignment Name                      ; Value                                  ; Default Value ; Entity Name      ; Section Id        ;
++--------------------------------------+----------------------------------------+---------------+------------------+-------------------+
+; COMPILER_SIGNATURE_ID                ; 159209593829887.174275105414192        ; --            ; --               ; --                ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --               ; tb                ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --               ; ShiftRightNBit_tb ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --               ; ShiftLeftNBit_tb  ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb                                     ; --            ; --               ; eda_simulation    ;
+; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --               ; eda_simulation    ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (SystemVerilog)        ; <None>        ; --               ; --                ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --               ; eda_simulation    ;
+; EDA_TEST_BENCH_FILE                  ; tb.sv                                  ; --            ; --               ; tb                ;
+; EDA_TEST_BENCH_FILE                  ; ShiftRightNBits_tb.sv                  ; --            ; --               ; ShiftRightNBit_tb ;
+; EDA_TEST_BENCH_FILE                  ; ShiftLeftNBits_tb.sv                   ; --            ; --               ; ShiftLeftNBit_tb  ;
+; EDA_TEST_BENCH_MODULE_NAME           ; tb                                     ; --            ; --               ; tb                ;
+; EDA_TEST_BENCH_MODULE_NAME           ; ShiftRightNBit_tb                      ; --            ; --               ; ShiftRightNBit_tb ;
+; EDA_TEST_BENCH_MODULE_NAME           ; ShiftLeftNBit_tb                       ; --            ; --               ; ShiftLeftNBit_tb  ;
+; EDA_TEST_BENCH_NAME                  ; tb                                     ; --            ; --               ; eda_simulation    ;
+; EDA_TEST_BENCH_NAME                  ; ShiftRightNBit_tb                      ; --            ; --               ; eda_simulation    ;
+; EDA_TEST_BENCH_NAME                  ; ShiftLeftNBit_tb                       ; --            ; --               ; eda_simulation    ;
+; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --               ; eda_simulation    ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --               ; --                ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --               ; --                ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; n_bit_multiplier ; Top               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; n_bit_multiplier ; Top               ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; n_bit_multiplier ; Top               ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --               ; --                ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --               ; --                ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --               ; --                ;
+; TOP_LEVEL_ENTITY                     ; n_bit_multiplier                       ; ALU           ; --               ; --                ;
++--------------------------------------+----------------------------------------+---------------+------------------+-------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------+
@@ -107,8 +108,8 @@ refer to the applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:09     ; 1.0                     ; 4771 MB             ; 00:00:20                           ;
-; Total                  ; 00:00:09     ; --                      ; --                  ; 00:00:20                           ;
+; Analysis & Elaboration ; 00:00:13     ; 1.0                     ; 4772 MB             ; 00:00:29                           ;
+; Total                  ; 00:00:13     ; --                      ; --                  ; 00:00:29                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
