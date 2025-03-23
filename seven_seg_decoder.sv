@@ -1,9 +1,7 @@
-module seven_seg_decoder #(parameter N = 8)(
+module seven_seg_decoder #(parameter N = 4)(
 	input logic [2*N-1:0] n,
 	output logic [6:0] seven_seg1,
-	output logic [6:0] seven_seg2,
-	output logic [6:0] seven_seg3,
-	output logic [6:0] seven_seg4
+	output logic [6:0] seven_seg2
 );
 	
 	assign seven_seg1[0] = (~n[3] & ~n[2] & ~n[1] & n[0]) | (~n[3] & n[2] & ~n[1] & ~n[0]) | (n[3] & ~n[2] & n[1] & n[0]) | (n[3] & n[2] & ~n[1] & n[0]);
@@ -21,21 +19,5 @@ module seven_seg_decoder #(parameter N = 8)(
 	assign seven_seg2[4] = (~n[7] & n[4]) | (~n[6] & ~n[5] & n[4]) | (~n[7] & n[6] & ~n[5]);
 	assign seven_seg2[5] = (~n[7] & ~n[6] & n[4]) | (~n[7] & ~n[6] & n[5]) | (~n[7] & n[5] & n[4]) | (n[7] & n[6] & ~n[5] & n[4]);
 	assign seven_seg2[6] = (~n[7] & ~n[6] & ~n[5]) | (~n[7] & n[6] & n[5] & n[4]) | (n[7] & n[6] & ~n[5] & ~n[4]);
-	
-	assign seven_seg3[0] = (~n[11] & ~n[10] & ~n[9] & n[8]) | (~n[11] & n[10] & ~n[9] & ~n[8]) | (n[11] & ~n[10] & n[9] & n[8]) | (n[11] & n[10] & ~n[9] & n[8]);
-	assign seven_seg3[1] = (n[10] & n[9] & ~n[8]) | (n[11] & n[9] & n[8]) | (n[11] & n[10] & ~n[8]) | (~n[11] & n[10] & ~n[9] & n[8]);
-	assign seven_seg3[2] = (n[11] & n[10] & ~n[8]) | (n[11] & n[10] & n[9]) | (~n[11] & ~n[10] & n[9] & ~n[8]);
-	assign seven_seg3[3] = (~n[10] & ~n[9] & n[8]) | (n[10] & n[9] & n[8]) | (~n[11] & n[10] & ~n[9] & ~n[8]) | (n[11] & ~n[10] & n[9] & ~n[8]);
-	assign seven_seg3[4] = (~n[11] & n[8]) | (~n[10] & ~n[9] & n[8]) | (~n[11] & n[10] & ~n[9]);
-	assign seven_seg3[5] = (~n[11] & ~n[10] & n[8]) | (~n[11] & ~n[10] & n[9]) | (~n[11] & n[9] & n[8]) | (n[11] & n[10] & ~n[9] & n[8]);
-	assign seven_seg3[6] = (~n[11] & ~n[10] & ~n[9]) | (~n[11] & n[10] & n[9] & n[8]) | (n[11] & n[10] & ~n[9] & ~n[8]);
-	
-	assign seven_seg4[0] = (~n[15] & ~n[14] & ~n[13] & n[12]) | (~n[15] & n[14] & ~n[13] & ~n[12]) | (n[15] & ~n[14] & n[13] & n[12]) | (n[15] & n[14] & ~n[13] & n[12]);
-	assign seven_seg4[1] = (n[14] & n[13] & ~n[12]) | (n[15] & n[13] & n[12]) | (n[15] & n[14] & ~n[12]) | (~n[15] & n[14] & ~n[13] & n[12]);
-	assign seven_seg4[2] = (n[15] & n[14] & ~n[12]) | (n[15] & n[14] & n[13]) | (~n[15] & ~n[14] & n[13] & ~n[12]);
-	assign seven_seg4[3] = (~n[14] & ~n[13] & n[12]) | (n[14] & n[13] & n[12]) | (~n[15] & n[14] & ~n[13] & ~n[12]) | (n[15] & ~n[14] & n[13] & ~n[12]);
-	assign seven_seg4[4] = (~n[15] & n[12]) | (~n[14] & ~n[13] & n[12]) | (~n[15] & n[14] & ~n[13]);
-	assign seven_seg4[5] = (~n[15] & ~n[14] & n[12]) | (~n[15] & ~n[14] & n[13]) | (~n[15] & n[13] & n[12]) | (n[15] & n[14] & ~n[13] & n[12]);
-	assign seven_seg4[6] = (~n[15] & ~n[14] & ~n[13]) | (~n[15] & n[14] & n[13] & n[12]) | (n[15] & n[14] & ~n[13] & ~n[12]);
 	
 endmodule
