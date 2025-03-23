@@ -55,21 +55,22 @@ module ALU #(parameter N = 4) (
 			load1 <= 0;
 			load2 <= 0;
 		end
-		else if (!load1 || !load2) begin
+		else if (!load1) begin
 			current_number <= number;
+			if (!load) begin
+				first_number <= number;
+				load1 <= 1;
+			end
 		end
-		else if (load1 && load2) begin
-			if (!mux1 && !mux2 && !mux3 && !mux4 && !equal)
-				current_number <= sum;
+		else if (!load2) begin
+			current_number <= number;
+			if (!load) begin
+				second_number <= number;
+				load2 <= 1;
+			end
 		end
-		else if (!load && !load1) begin
-			first_number <= number;
-			load1 <= 1;
+		else if (!equal) begin
+			current_number <= sum;
 		end
-		else if (!load && !load2) begin
-			second_number <= number;
-			load2 <= 1;
-		end
-		
 	end
 endmodule
