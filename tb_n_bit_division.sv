@@ -1,10 +1,12 @@
+`timescale 1ns/1ps
+
 module tb_n_bit_division;
     parameter N = 8;
     logic [N-1:0] A, B;
     logic [N-1:0] quotient, remainder;
     
     // Instancia del módulo de división
-    division #(.N(N)) div_inst (
+    divider #(.N(N)) div_inst (
         .dividend(A),
         .divisor(B),
         .quotient(quotient),
