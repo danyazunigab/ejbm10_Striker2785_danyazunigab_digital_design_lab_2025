@@ -87,17 +87,16 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_AF14 -to clk
-set_location_assignment PIN_AJ4 -to equal
+set_location_assignment PIN_AK4 -to equal
 set_location_assignment PIN_AA24 -to flags[3]
 set_location_assignment PIN_AB23 -to flags[2]
 set_location_assignment PIN_AC23 -to flags[1]
 set_location_assignment PIN_AD24 -to flags[0]
-set_location_assignment PIN_AK4 -to load
 set_location_assignment PIN_AB30 -to mux4
 set_location_assignment PIN_Y27 -to mux3
 set_location_assignment PIN_AB28 -to mux2
 set_location_assignment PIN_AC30 -to mux1
-set_location_assignment PIN_AA14 -to rst
+set_location_assignment PIN_AJ4 -to rst
 set_location_assignment PIN_W17 -to segs1[0]
 set_location_assignment PIN_V18 -to segs1[1]
 set_location_assignment PIN_AG17 -to segs1[2]
@@ -112,4 +111,13 @@ set_location_assignment PIN_AE16 -to segs2[2]
 set_location_assignment PIN_AD17 -to segs2[3]
 set_location_assignment PIN_AE18 -to segs2[4]
 set_location_assignment PIN_AE17 -to segs2[5]
+set_location_assignment PIN_AA15 -to load1
+set_location_assignment PIN_AA14 -to load2
+set_location_assignment PIN_AA21 -to segs3[0]
+set_location_assignment PIN_AB17 -to segs3[1]
+set_location_assignment PIN_AA18 -to segs3[2]
+set_location_assignment PIN_Y17 -to segs3[3]
+set_location_assignment PIN_Y18 -to segs3[4]
+set_location_assignment PIN_AF18 -to segs3[5]
+set_location_assignment PIN_W16 -to segs3[6]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
