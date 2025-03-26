@@ -1,5 +1,5 @@
-Analysis & Elaboration report for ALU
-Fri Mar 21 15:07:44 2025
+Analysis & Synthesis report for ALU
+Tue Mar 25 20:26:27 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -7,13 +7,40 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: Top-level Entity: |n_bit_adder
-  5. Analysis & Elaboration Settings
-  6. Port Connectivity Checks: "full_adder:adder[0].u1"
-  7. Analysis & Elaboration Messages
-  8. Analysis & Elaboration Suppressed Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |ALU
+ 11. Parameter Settings for User Entity Instance: n_bit_adder:adder
+ 12. Parameter Settings for User Entity Instance: n_bit_substractor:substractor
+ 13. Parameter Settings for User Entity Instance: n_bit_multiplier:multiplier
+ 14. Parameter Settings for User Entity Instance: n_bit_multiplier:multiplier|n_bit_adder:loop3[0].adder1
+ 15. Parameter Settings for User Entity Instance: n_bit_multiplier:multiplier|n_bit_adder:loop3[1].adder1
+ 16. Parameter Settings for User Entity Instance: n_bit_multiplier:multiplier|n_bit_adder:loop3[2].adder1
+ 17. Parameter Settings for User Entity Instance: n_bit_and:andd
+ 18. Parameter Settings for User Entity Instance: seven_seg_decoder:displays
+ 19. Parameter Settings for Inferred Entity Instance: seven_seg_decoder:displays|lpm_divide:Mod0
+ 20. Parameter Settings for Inferred Entity Instance: seven_seg_decoder:displays|lpm_divide:Div0
+ 21. Parameter Settings for Inferred Entity Instance: seven_seg_decoder:displays|lpm_divide:Mod1
+ 22. Parameter Settings for Inferred Entity Instance: seven_seg_decoder:displays|lpm_divide:Div1
+ 23. Parameter Settings for Inferred Entity Instance: seven_seg_decoder:displays|lpm_divide:Mod2
+ 24. Port Connectivity Checks: "n_bit_multiplier:multiplier|n_bit_adder:loop3[2].adder1"
+ 25. Port Connectivity Checks: "n_bit_multiplier:multiplier|n_bit_adder:loop3[1].adder1"
+ 26. Port Connectivity Checks: "n_bit_multiplier:multiplier|n_bit_adder:loop3[0].adder1|full_adder:adder[0].u1"
+ 27. Port Connectivity Checks: "n_bit_multiplier:multiplier|n_bit_adder:loop3[0].adder1"
+ 28. Port Connectivity Checks: "n_bit_substractor:substractor|full_substractor:substractor[3].u1"
+ 29. Port Connectivity Checks: "n_bit_substractor:substractor|full_substractor:substractor[0].u1"
+ 30. Port Connectivity Checks: "n_bit_substractor:substractor"
+ 31. Port Connectivity Checks: "n_bit_adder:adder|full_adder:adder[0].u1"
+ 32. Post-Synthesis Netlist Statistics for Top Partition
+ 33. Elapsed Time Per Partition
+ 34. Analysis & Synthesis Messages
+ 35. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -36,57 +63,36 @@ refer to the applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Fri Mar 21 15:07:44 2025       ;
-; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name                 ; ALU                                         ;
-; Top-level Entity Name         ; n_bit_adder                                 ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+-----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |n_bit_adder ;
-+----------------+-------+----------------------------------------------------+
-; Parameter Name ; Value ; Type                                               ;
-+----------------+-------+----------------------------------------------------+
-; N              ; 8     ; Signed Integer                                     ;
-+----------------+-------+----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Mar 25 20:26:27 2025       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; ALU                                         ;
+; Top-level Entity Name           ; ALU                                         ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 17                                          ;
+; Total pins                      ; 38                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
-; Top-level entity name                                                           ; n_bit_adder        ; ALU                ;
+; Top-level entity name                                                           ; ALU                ; ALU                ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -167,33 +173,501 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+----------------------------------------------------+
-; Port Connectivity Checks: "full_adder:adder[0].u1" ;
-+------+-------+----------+--------------------------+
-; Port ; Type  ; Severity ; Details                  ;
-+------+-------+----------+--------------------------+
-; Cin  ; Input ; Info     ; Stuck at GND             ;
-+------+-------+----------+--------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                       ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                   ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------+---------+
+; full_adder.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/full_adder.sv          ;         ;
+; full_substractor.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/full_substractor.sv    ;         ;
+; n_bit_adder.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_adder.sv         ;         ;
+; n_bit_substractor.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_substractor.sv   ;         ;
+; ALU.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv                 ;         ;
+; seven_seg_decoder.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/seven_seg_decoder.sv   ;         ;
+; n_bit_and.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_and.sv           ;         ;
+; n_bit_multiplier.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_multiplier.sv    ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_divide.tdf                                          ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/abs_divider.inc                                         ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                     ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                          ;         ;
+; db/lpm_divide_2go.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/db/lpm_divide_2go.tdf  ;         ;
+; db/abs_divider_8ag.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/db/abs_divider_8ag.tdf ;         ;
+; db/alt_u_div_0te.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/db/alt_u_div_0te.tdf   ;         ;
+; db/lpm_abs_kn9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/db/lpm_abs_kn9.tdf     ;         ;
+; db/lpm_abs_on9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/db/lpm_abs_on9.tdf     ;         ;
+; db/lpm_divide_vno.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/db/lpm_divide_vno.tdf  ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                                                                                 ;
++---------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                                                                         ;
++---------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 191                                                                                                                           ;
+;                                             ;                                                                                                                               ;
+; Combinational ALUT usage for logic          ; 361                                                                                                                           ;
+;     -- 7 input functions                    ; 2                                                                                                                             ;
+;     -- 6 input functions                    ; 17                                                                                                                            ;
+;     -- 5 input functions                    ; 23                                                                                                                            ;
+;     -- 4 input functions                    ; 59                                                                                                                            ;
+;     -- <=3 input functions                  ; 260                                                                                                                           ;
+;                                             ;                                                                                                                               ;
+; Dedicated logic registers                   ; 17                                                                                                                            ;
+;                                             ;                                                                                                                               ;
+; I/O pins                                    ; 38                                                                                                                            ;
+;                                             ;                                                                                                                               ;
+; Total DSP Blocks                            ; 0                                                                                                                             ;
+;                                             ;                                                                                                                               ;
+; Maximum fan-out node                        ; seven_seg_decoder:displays|lpm_divide:Div0|lpm_divide_vno:auto_generated|abs_divider_8ag:divider|alt_u_div_0te:divider|op_7~1 ;
+; Maximum fan-out                             ; 17                                                                                                                            ;
+; Total fan-out                               ; 1231                                                                                                                          ;
+; Average fan-out                             ; 2.71                                                                                                                          ;
++---------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                  ;
++--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node                 ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                         ; Entity Name       ; Library Name ;
++--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+
+; |ALU                                       ; 361 (28)            ; 17 (17)                   ; 0                 ; 0          ; 38   ; 0            ; |ALU                                                                                                                        ; ALU               ; work         ;
+;    |n_bit_adder:adder|                     ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_adder:adder                                                                                                      ; n_bit_adder       ; work         ;
+;       |full_adder:adder[1].u1|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_adder:adder|full_adder:adder[1].u1                                                                               ; full_adder        ; work         ;
+;       |full_adder:adder[3].u1|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_adder:adder|full_adder:adder[3].u1                                                                               ; full_adder        ; work         ;
+;    |n_bit_multiplier:multiplier|           ; 16 (2)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier                                                                                            ; n_bit_multiplier  ; work         ;
+;       |n_bit_adder:loop3[0].adder1|        ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[0].adder1                                                                ; n_bit_adder       ; work         ;
+;          |full_adder:adder[2].u1|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[0].adder1|full_adder:adder[2].u1                                         ; full_adder        ; work         ;
+;          |full_adder:adder[3].u1|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[0].adder1|full_adder:adder[3].u1                                         ; full_adder        ; work         ;
+;          |full_adder:adder[4].u1|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[0].adder1|full_adder:adder[4].u1                                         ; full_adder        ; work         ;
+;       |n_bit_adder:loop3[1].adder1|        ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[1].adder1                                                                ; n_bit_adder       ; work         ;
+;          |full_adder:adder[2].u1|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[1].adder1|full_adder:adder[2].u1                                         ; full_adder        ; work         ;
+;          |full_adder:adder[4].u1|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[1].adder1|full_adder:adder[4].u1                                         ; full_adder        ; work         ;
+;          |full_adder:adder[5].u1|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[1].adder1|full_adder:adder[5].u1                                         ; full_adder        ; work         ;
+;       |n_bit_adder:loop3[2].adder1|        ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[2].adder1                                                                ; n_bit_adder       ; work         ;
+;          |full_adder:adder[3].u1|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[2].adder1|full_adder:adder[3].u1                                         ; full_adder        ; work         ;
+;          |full_adder:adder[5].u1|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[2].adder1|full_adder:adder[5].u1                                         ; full_adder        ; work         ;
+;    |n_bit_substractor:substractor|         ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_substractor:substractor                                                                                          ; n_bit_substractor ; work         ;
+;       |full_substractor:substractor[1].u1| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_substractor:substractor|full_substractor:substractor[1].u1                                                       ; full_substractor  ; work         ;
+;       |full_substractor:substractor[3].u1| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_substractor:substractor|full_substractor:substractor[3].u1                                                       ; full_substractor  ; work         ;
+;    |seven_seg_decoder:displays|            ; 313 (21)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|seven_seg_decoder:displays                                                                                             ; seven_seg_decoder ; work         ;
+;       |lpm_divide:Div0|                    ; 68 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|seven_seg_decoder:displays|lpm_divide:Div0                                                                             ; lpm_divide        ; work         ;
+;          |lpm_divide_vno:auto_generated|   ; 68 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|seven_seg_decoder:displays|lpm_divide:Div0|lpm_divide_vno:auto_generated                                               ; lpm_divide_vno    ; work         ;
+;             |abs_divider_8ag:divider|      ; 68 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|seven_seg_decoder:displays|lpm_divide:Div0|lpm_divide_vno:auto_generated|abs_divider_8ag:divider                       ; abs_divider_8ag   ; work         ;
+;                |alt_u_div_0te:divider|     ; 68 (68)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|seven_seg_decoder:displays|lpm_divide:Div0|lpm_divide_vno:auto_generated|abs_divider_8ag:divider|alt_u_div_0te:divider ; alt_u_div_0te     ; work         ;
+;       |lpm_divide:Div1|                    ; 52 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|seven_seg_decoder:displays|lpm_divide:Div1                                                                             ; lpm_divide        ; work         ;
+;          |lpm_divide_vno:auto_generated|   ; 52 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|seven_seg_decoder:displays|lpm_divide:Div1|lpm_divide_vno:auto_generated                                               ; lpm_divide_vno    ; work         ;
+;             |abs_divider_8ag:divider|      ; 52 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|seven_seg_decoder:displays|lpm_divide:Div1|lpm_divide_vno:auto_generated|abs_divider_8ag:divider                       ; abs_divider_8ag   ; work         ;
+;                |alt_u_div_0te:divider|     ; 52 (52)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|seven_seg_decoder:displays|lpm_divide:Div1|lpm_divide_vno:auto_generated|abs_divider_8ag:divider|alt_u_div_0te:divider ; alt_u_div_0te     ; work         ;
+;       |lpm_divide:Mod0|                    ; 72 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|seven_seg_decoder:displays|lpm_divide:Mod0                                                                             ; lpm_divide        ; work         ;
+;          |lpm_divide_2go:auto_generated|   ; 72 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|seven_seg_decoder:displays|lpm_divide:Mod0|lpm_divide_2go:auto_generated                                               ; lpm_divide_2go    ; work         ;
+;             |abs_divider_8ag:divider|      ; 72 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|seven_seg_decoder:displays|lpm_divide:Mod0|lpm_divide_2go:auto_generated|abs_divider_8ag:divider                       ; abs_divider_8ag   ; work         ;
+;                |alt_u_div_0te:divider|     ; 72 (72)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|seven_seg_decoder:displays|lpm_divide:Mod0|lpm_divide_2go:auto_generated|abs_divider_8ag:divider|alt_u_div_0te:divider ; alt_u_div_0te     ; work         ;
+;       |lpm_divide:Mod1|                    ; 56 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|seven_seg_decoder:displays|lpm_divide:Mod1                                                                             ; lpm_divide        ; work         ;
+;          |lpm_divide_2go:auto_generated|   ; 56 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|seven_seg_decoder:displays|lpm_divide:Mod1|lpm_divide_2go:auto_generated                                               ; lpm_divide_2go    ; work         ;
+;             |abs_divider_8ag:divider|      ; 56 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|seven_seg_decoder:displays|lpm_divide:Mod1|lpm_divide_2go:auto_generated|abs_divider_8ag:divider                       ; abs_divider_8ag   ; work         ;
+;                |alt_u_div_0te:divider|     ; 56 (56)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|seven_seg_decoder:displays|lpm_divide:Mod1|lpm_divide_2go:auto_generated|abs_divider_8ag:divider|alt_u_div_0te:divider ; alt_u_div_0te     ; work         ;
+;       |lpm_divide:Mod2|                    ; 44 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|seven_seg_decoder:displays|lpm_divide:Mod2                                                                             ; lpm_divide        ; work         ;
+;          |lpm_divide_2go:auto_generated|   ; 44 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|seven_seg_decoder:displays|lpm_divide:Mod2|lpm_divide_2go:auto_generated                                               ; lpm_divide_2go    ; work         ;
+;             |abs_divider_8ag:divider|      ; 44 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|seven_seg_decoder:displays|lpm_divide:Mod2|lpm_divide_2go:auto_generated|abs_divider_8ag:divider                       ; abs_divider_8ag   ; work         ;
+;                |alt_u_div_0te:divider|     ; 44 (44)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|seven_seg_decoder:displays|lpm_divide:Mod2|lpm_divide_2go:auto_generated|abs_divider_8ag:divider|alt_u_div_0te:divider ; alt_u_div_0te     ; work         ;
++--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 17    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 9     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 17:1               ; 3 bits    ; 33 LEs        ; 15 LEs               ; 18 LEs                 ; Yes        ; |ALU|current_number[7]     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |ALU ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; N              ; 4     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: n_bit_adder:adder ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; N              ; 4     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: n_bit_substractor:substractor ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; N              ; 4     ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: n_bit_multiplier:multiplier ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; N              ; 4     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: n_bit_multiplier:multiplier|n_bit_adder:loop3[0].adder1 ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; N              ; 7     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: n_bit_multiplier:multiplier|n_bit_adder:loop3[1].adder1 ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; N              ; 7     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: n_bit_multiplier:multiplier|n_bit_adder:loop3[2].adder1 ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; N              ; 7     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: n_bit_and:andd ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; N              ; 4     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: seven_seg_decoder:displays ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; N              ; 4     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: seven_seg_decoder:displays|lpm_divide:Mod0 ;
++------------------------+----------------+---------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                              ;
++------------------------+----------------+---------------------------------------------------+
+; LPM_WIDTHN             ; 9              ; Untyped                                           ;
+; LPM_WIDTHD             ; 5              ; Untyped                                           ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                           ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                                           ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                           ;
+; CBXI_PARAMETER         ; lpm_divide_2go ; Untyped                                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                           ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                    ;
++------------------------+----------------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: seven_seg_decoder:displays|lpm_divide:Div0 ;
++------------------------+----------------+---------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                              ;
++------------------------+----------------+---------------------------------------------------+
+; LPM_WIDTHN             ; 9              ; Untyped                                           ;
+; LPM_WIDTHD             ; 5              ; Untyped                                           ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                           ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                                           ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                           ;
+; CBXI_PARAMETER         ; lpm_divide_vno ; Untyped                                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                           ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                    ;
++------------------------+----------------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: seven_seg_decoder:displays|lpm_divide:Mod1 ;
++------------------------+----------------+---------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                              ;
++------------------------+----------------+---------------------------------------------------+
+; LPM_WIDTHN             ; 9              ; Untyped                                           ;
+; LPM_WIDTHD             ; 5              ; Untyped                                           ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                           ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                                           ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                           ;
+; CBXI_PARAMETER         ; lpm_divide_2go ; Untyped                                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                           ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                    ;
++------------------------+----------------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: seven_seg_decoder:displays|lpm_divide:Div1 ;
++------------------------+----------------+---------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                              ;
++------------------------+----------------+---------------------------------------------------+
+; LPM_WIDTHN             ; 9              ; Untyped                                           ;
+; LPM_WIDTHD             ; 5              ; Untyped                                           ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                           ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                                           ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                           ;
+; CBXI_PARAMETER         ; lpm_divide_vno ; Untyped                                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                           ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                    ;
++------------------------+----------------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: seven_seg_decoder:displays|lpm_divide:Mod2 ;
++------------------------+----------------+---------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                              ;
++------------------------+----------------+---------------------------------------------------+
+; LPM_WIDTHN             ; 9              ; Untyped                                           ;
+; LPM_WIDTHD             ; 5              ; Untyped                                           ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                           ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                                           ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                           ;
+; CBXI_PARAMETER         ; lpm_divide_2go ; Untyped                                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                           ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                    ;
++------------------------+----------------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "n_bit_multiplier:multiplier|n_bit_adder:loop3[2].adder1"                                                                                                                           ;
++---------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                          ;
++---------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; A       ; Input ; Warning  ; Input port expression (8 bits) is wider than the input port (7 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; B[2..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                     ;
++---------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "n_bit_multiplier:multiplier|n_bit_adder:loop3[1].adder1"                                                                                                                            ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                                                          ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; A       ; Input  ; Warning  ; Input port expression (8 bits) is wider than the input port (7 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; B[1..0] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                     ;
+; B[6]    ; Input  ; Info     ; Stuck at GND                                                                                                                                                                     ;
+; S[7]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                              ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "n_bit_multiplier:multiplier|n_bit_adder:loop3[0].adder1|full_adder:adder[0].u1" ;
++------+-------+----------+----------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------+
+; Cin  ; Input ; Info     ; Stuck at GND                                                                     ;
++------+-------+----------+----------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "n_bit_multiplier:multiplier|n_bit_adder:loop3[0].adder1"                                                                                                                            ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                                                          ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; A       ; Input  ; Warning  ; Input port expression (8 bits) is wider than the input port (7 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; A[6..4] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                     ;
+; B[6..5] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                     ;
+; B[0]    ; Input  ; Info     ; Stuck at GND                                                                                                                                                                     ;
+; S[7]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                              ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "n_bit_substractor:substractor|full_substractor:substractor[3].u1"                   ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Bout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "n_bit_substractor:substractor|full_substractor:substractor[0].u1" ;
++------+-------+----------+--------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                            ;
++------+-------+----------+--------------------------------------------------------------------+
+; Bin  ; Input ; Info     ; Stuck at GND                                                       ;
++------+-------+----------+--------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "n_bit_substractor:substractor"                                                                                                                                        ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                               ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; D    ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (5 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Port Connectivity Checks: "n_bit_adder:adder|full_adder:adder[0].u1" ;
++------+-------+----------+--------------------------------------------+
+; Port ; Type  ; Severity ; Details                                    ;
++------+-------+----------+--------------------------------------------+
+; Cin  ; Input ; Info     ; Stuck at GND                               ;
++------+-------+----------+--------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 17                          ;
+;     CLR               ; 1                           ;
+;     ENA               ; 8                           ;
+;     ENA CLR           ; 8                           ;
+; arriav_lcell_comb     ; 365                         ;
+;     arith             ; 166                         ;
+;         0 data inputs ; 42                          ;
+;         1 data inputs ; 21                          ;
+;         2 data inputs ; 14                          ;
+;         3 data inputs ; 57                          ;
+;         4 data inputs ; 32                          ;
+;     extend            ; 2                           ;
+;         7 data inputs ; 2                           ;
+;     normal            ; 169                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 48                          ;
+;         3 data inputs ; 50                          ;
+;         4 data inputs ; 27                          ;
+;         5 data inputs ; 23                          ;
+;         6 data inputs ; 17                          ;
+;     shared            ; 28                          ;
+;         0 data inputs ; 16                          ;
+;         1 data inputs ; 12                          ;
+; boundary_port         ; 38                          ;
+;                       ;                             ;
+; Max LUT depth         ; 16.70                       ;
+; Average LUT depth     ; 12.53                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Mar 21 15:07:32 2025
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU --analysis_and_elaboration
+    Info: Processing started: Tue Mar 25 20:26:13 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Warning (12019): Can't analyze file -- file ShiftRightNBits_tb.sv is missing
-Warning (12019): Can't analyze file -- file ShiftRightNBits.sv is missing
-Warning (12019): Can't analyze file -- file ShiftLeftNBits_tb.sv is missing
-Warning (12019): Can't analyze file -- file ShiftLeftNBits.sv is missing
-Warning (12019): Can't analyze file -- file Shift1Bit.sv is missing
+Info (12021): Found 1 design units, including 1 entities, in source file shiftrightnbits_tb.sv
+    Info (12023): Found entity 1: ShiftRightNBits_tb File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ShiftRightNBits_tb.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file shiftrightnbits.sv
+    Info (12023): Found entity 1: ShiftRightNBits File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ShiftRightNBits.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shiftleftnbits_tb.sv
+    Info (12023): Found entity 1: shiftLeftNbits_tb File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ShiftLeftNBits_tb.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file shiftleftnbits.sv
+    Info (12023): Found entity 1: shiftLeftNbits File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ShiftLeftNBits.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shift1bit.sv
+    Info (12023): Found entity 1: shift1bit File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Shift1Bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file full_adder.sv
     Info (12023): Found entity 1: full_adder File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/full_adder.sv Line: 1
-Warning (10229): Verilog HDL Expression warning at tb.sv(13): truncated literal to match 5 bits File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/tb.sv Line: 13
 Info (12021): Found 1 design units, including 1 entities, in source file tb.sv
     Info (12023): Found entity 1: tb File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file full_substractor.sv
@@ -202,24 +676,110 @@ Info (12021): Found 1 design units, including 1 entities, in source file n_bit_a
     Info (12023): Found entity 1: n_bit_adder File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file n_bit_substractor.sv
     Info (12023): Found entity 1: n_bit_substractor File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_substractor.sv Line: 1
-Warning (12019): Can't analyze file -- file n_bit_multiplier.sv is missing
-Warning (12019): Can't analyze file -- file n_bit_and.sv is missing
-Info (12021): Found 0 design units, including 0 entities, in source file alu.sv
+Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
+    Info (12023): Found entity 1: ALU File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file seven_seg_decoder.sv
     Info (12023): Found entity 1: seven_seg_decoder File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/seven_seg_decoder.sv Line: 1
-Info (12127): Elaborating entity "n_bit_adder" for the top level hierarchy
-Info (12128): Elaborating entity "full_adder" for hierarchy "full_adder:adder[0].u1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_adder.sv Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file n_bit_and.sv
+    Info (12023): Found entity 1: n_bit_and File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_and.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file n_bit_multiplier.sv
+    Info (12023): Found entity 1: n_bit_multiplier File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_multiplier.sv Line: 1
+Info (12127): Elaborating entity "ALU" for the top level hierarchy
+Warning (10858): Verilog HDL warning at ALU.sv(23): object div_result used but never assigned File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 23
+Warning (10858): Verilog HDL warning at ALU.sv(24): object mod_result used but never assigned File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 24
+Warning (10858): Verilog HDL warning at ALU.sv(26): object or_result used but never assigned File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 26
+Warning (10858): Verilog HDL warning at ALU.sv(27): object xor_result used but never assigned File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 27
+Warning (10858): Verilog HDL warning at ALU.sv(28): object shift_right used but never assigned File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 28
+Warning (10858): Verilog HDL warning at ALU.sv(29): object shift_left used but never assigned File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 29
+Warning (10030): Net "div_result" at ALU.sv(23) has no driver or initial value, using a default initial value '0' File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 23
+Warning (10030): Net "mod_result" at ALU.sv(24) has no driver or initial value, using a default initial value '0' File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 24
+Warning (10030): Net "or_result" at ALU.sv(26) has no driver or initial value, using a default initial value '0' File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 26
+Warning (10030): Net "xor_result" at ALU.sv(27) has no driver or initial value, using a default initial value '0' File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 27
+Warning (10030): Net "shift_right" at ALU.sv(28) has no driver or initial value, using a default initial value '0' File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 28
+Warning (10030): Net "shift_left" at ALU.sv(29) has no driver or initial value, using a default initial value '0' File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 29
+Warning (10034): Output port "flags" at ALU.sv(16) has no driver File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 16
+Info (12128): Elaborating entity "n_bit_adder" for hierarchy "n_bit_adder:adder" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 37
+Info (12128): Elaborating entity "full_adder" for hierarchy "n_bit_adder:adder|full_adder:adder[0].u1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_adder.sv Line: 19
+Info (12128): Elaborating entity "n_bit_substractor" for hierarchy "n_bit_substractor:substractor" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 43
+Info (12128): Elaborating entity "full_substractor" for hierarchy "n_bit_substractor:substractor|full_substractor:substractor[0].u1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_substractor.sv Line: 19
+Warning (10036): Verilog HDL or VHDL warning at full_substractor.sv(11): object "negB" assigned a value but never read File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/full_substractor.sv Line: 11
+Info (12128): Elaborating entity "n_bit_multiplier" for hierarchy "n_bit_multiplier:multiplier" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 49
+Info (12128): Elaborating entity "n_bit_adder" for hierarchy "n_bit_multiplier:multiplier|n_bit_adder:loop3[0].adder1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_multiplier.sv Line: 29
+Info (12128): Elaborating entity "n_bit_and" for hierarchy "n_bit_and:andd" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 55
+Info (12128): Elaborating entity "seven_seg_decoder" for hierarchy "seven_seg_decoder:displays" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 62
+Warning (10230): Verilog HDL assignment warning at seven_seg_decoder.sv(14): truncated value with size 32 to match size of target (4) File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/seven_seg_decoder.sv Line: 14
+Warning (10230): Verilog HDL assignment warning at seven_seg_decoder.sv(17): truncated value with size 32 to match size of target (4) File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/seven_seg_decoder.sv Line: 17
+Warning (10230): Verilog HDL assignment warning at seven_seg_decoder.sv(20): truncated value with size 32 to match size of target (4) File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/seven_seg_decoder.sv Line: 20
+Info (278001): Inferred 5 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seven_seg_decoder:displays|Mod0" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/seven_seg_decoder.sv Line: 14
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seven_seg_decoder:displays|Div0" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/seven_seg_decoder.sv Line: 15
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seven_seg_decoder:displays|Mod1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/seven_seg_decoder.sv Line: 17
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seven_seg_decoder:displays|Div1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/seven_seg_decoder.sv Line: 18
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seven_seg_decoder:displays|Mod2" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/seven_seg_decoder.sv Line: 20
+Info (12130): Elaborated megafunction instantiation "seven_seg_decoder:displays|lpm_divide:Mod0" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/seven_seg_decoder.sv Line: 14
+Info (12133): Instantiated megafunction "seven_seg_decoder:displays|lpm_divide:Mod0" with the following parameter: File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/seven_seg_decoder.sv Line: 14
+    Info (12134): Parameter "LPM_WIDTHN" = "9"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_2go.tdf
+    Info (12023): Found entity 1: lpm_divide_2go File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/db/lpm_divide_2go.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_8ag.tdf
+    Info (12023): Found entity 1: abs_divider_8ag File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/db/abs_divider_8ag.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_0te.tdf
+    Info (12023): Found entity 1: alt_u_div_0te File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/db/alt_u_div_0te.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_kn9.tdf
+    Info (12023): Found entity 1: lpm_abs_kn9 File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/db/lpm_abs_kn9.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_on9.tdf
+    Info (12023): Found entity 1: lpm_abs_on9 File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/db/lpm_abs_on9.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "seven_seg_decoder:displays|lpm_divide:Div0" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/seven_seg_decoder.sv Line: 15
+Info (12133): Instantiated megafunction "seven_seg_decoder:displays|lpm_divide:Div0" with the following parameter: File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/seven_seg_decoder.sv Line: 15
+    Info (12134): Parameter "LPM_WIDTHN" = "9"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_vno.tdf
+    Info (12023): Found entity 1: lpm_divide_vno File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/db/lpm_divide_vno.tdf Line: 24
+Info (12130): Elaborated megafunction instantiation "seven_seg_decoder:displays|lpm_divide:Mod1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/seven_seg_decoder.sv Line: 17
+Info (12133): Instantiated megafunction "seven_seg_decoder:displays|lpm_divide:Mod1" with the following parameter: File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/seven_seg_decoder.sv Line: 17
+    Info (12134): Parameter "LPM_WIDTHN" = "9"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12130): Elaborated megafunction instantiation "seven_seg_decoder:displays|lpm_divide:Div1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/seven_seg_decoder.sv Line: 18
+Info (12133): Instantiated megafunction "seven_seg_decoder:displays|lpm_divide:Div1" with the following parameter: File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/seven_seg_decoder.sv Line: 18
+    Info (12134): Parameter "LPM_WIDTHN" = "9"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "flags[0]" is stuck at GND File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 16
+    Warning (13410): Pin "flags[1]" is stuck at GND File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 16
+    Warning (13410): Pin "flags[2]" is stuck at GND File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 16
+    Warning (13410): Pin "flags[3]" is stuck at GND File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 16
+Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/output_files/ALU.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4773 megabytes
-    Info: Processing ended: Fri Mar 21 15:07:44 2025
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:27
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 407 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 25 output pins
+    Info (21061): Implemented 369 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
+    Info: Peak virtual memory: 4842 megabytes
+    Info: Processing ended: Tue Mar 25 20:26:27 2025
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:29
 
 
-+--------------------------------------------+
-; Analysis & Elaboration Suppressed Messages ;
-+--------------------------------------------+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
 The suppressed messages can be found in C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/output_files/ALU.map.smsg.
 
 

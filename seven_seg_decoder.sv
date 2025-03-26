@@ -1,41 +1,43 @@
-module seven_seg_decoder #(parameter N = 8)(
+module seven_seg_decoder #(parameter N = 4)(
 	input logic [2*N-1:0] n,
 	output logic [6:0] seven_seg1,
 	output logic [6:0] seven_seg2,
-	output logic [6:0] seven_seg3,
-	output logic [6:0] seven_seg4
+	output logic [6:0] seven_seg3
 );
 	
-	assign seven_seg1[0] = (~n[3] & ~n[2] & ~n[1] & n[0]) | (~n[3] & n[2] & ~n[1] & ~n[0]) | (n[3] & ~n[2] & n[1] & n[0]) | (n[3] & n[2] & ~n[1] & n[0]);
-	assign seven_seg1[1] = (n[2] & n[1] & ~n[0]) | (n[3] & n[1] & n[0]) | (n[3] & n[2] & ~n[0]) | (~n[3] & n[2] & ~n[1] & n[0]);
-	assign seven_seg1[2] = (n[3] & n[2] & ~n[0]) | (n[3] & n[2] & n[1]) | (~n[3] & ~n[2] & n[1] & ~n[0]);
-	assign seven_seg1[3] = (~n[2] & ~n[1] & n[0]) | (n[2] & n[1] & n[0]) | (~n[3] & n[2] & ~n[1] & ~n[0]) | (n[3] & ~n[2] & n[1] & ~n[0]);
-	assign seven_seg1[4] = (~n[3] & n[0]) | (~n[2] & ~n[1] & n[0]) | (~n[3] & n[2] & ~n[1]);
-	assign seven_seg1[5] = (~n[3] & ~n[2] & n[0]) | (~n[3] & ~n[2] & n[1]) | (~n[3] & n[1] & n[0]) | (n[3] & n[2] & ~n[1] & n[0]);
-	assign seven_seg1[6] = (~n[3] & ~n[2] & ~n[1]) | (~n[3] & n[2] & n[1] & n[0]) | (n[3] & n[2] & ~n[1] & ~n[0]);
-	
-	assign seven_seg2[0] = (~n[7] & ~n[6] & ~n[5] & n[4]) | (~n[7] & n[6] & ~n[5] & ~n[4]) | (n[7] & ~n[6] & n[5] & n[4]) | (n[7] & n[6] & ~n[5] & n[4]);
-	assign seven_seg2[1] = (n[6] & n[5] & ~n[4]) | (n[7] & n[5] & n[4]) | (n[7] & n[6] & ~n[4]) | (~n[7] & n[6] & ~n[5] & n[4]);
-	assign seven_seg2[2] = (n[7] & n[6] & ~n[4]) | (n[7] & n[6] & n[5]) | (~n[7] & ~n[6] & n[5] & ~n[4]);
-	assign seven_seg2[3] = (~n[6] & ~n[5] & n[4]) | (n[6] & n[5] & n[4]) | (~n[7] & n[6] & ~n[5] & ~n[4]) | (n[7] & ~n[6] & n[5] & ~n[4]);
-	assign seven_seg2[4] = (~n[7] & n[4]) | (~n[6] & ~n[5] & n[4]) | (~n[7] & n[6] & ~n[5]);
-	assign seven_seg2[5] = (~n[7] & ~n[6] & n[4]) | (~n[7] & ~n[6] & n[5]) | (~n[7] & n[5] & n[4]) | (n[7] & n[6] & ~n[5] & n[4]);
-	assign seven_seg2[6] = (~n[7] & ~n[6] & ~n[5]) | (~n[7] & n[6] & n[5] & n[4]) | (n[7] & n[6] & ~n[5] & ~n[4]);
-	
-	assign seven_seg3[0] = (~n[11] & ~n[10] & ~n[9] & n[8]) | (~n[11] & n[10] & ~n[9] & ~n[8]) | (n[11] & ~n[10] & n[9] & n[8]) | (n[11] & n[10] & ~n[9] & n[8]);
-	assign seven_seg3[1] = (n[10] & n[9] & ~n[8]) | (n[11] & n[9] & n[8]) | (n[11] & n[10] & ~n[8]) | (~n[11] & n[10] & ~n[9] & n[8]);
-	assign seven_seg3[2] = (n[11] & n[10] & ~n[8]) | (n[11] & n[10] & n[9]) | (~n[11] & ~n[10] & n[9] & ~n[8]);
-	assign seven_seg3[3] = (~n[10] & ~n[9] & n[8]) | (n[10] & n[9] & n[8]) | (~n[11] & n[10] & ~n[9] & ~n[8]) | (n[11] & ~n[10] & n[9] & ~n[8]);
-	assign seven_seg3[4] = (~n[11] & n[8]) | (~n[10] & ~n[9] & n[8]) | (~n[11] & n[10] & ~n[9]);
-	assign seven_seg3[5] = (~n[11] & ~n[10] & n[8]) | (~n[11] & ~n[10] & n[9]) | (~n[11] & n[9] & n[8]) | (n[11] & n[10] & ~n[9] & n[8]);
-	assign seven_seg3[6] = (~n[11] & ~n[10] & ~n[9]) | (~n[11] & n[10] & n[9] & n[8]) | (n[11] & n[10] & ~n[9] & ~n[8]);
-	
-	assign seven_seg4[0] = (~n[15] & ~n[14] & ~n[13] & n[12]) | (~n[15] & n[14] & ~n[13] & ~n[12]) | (n[15] & ~n[14] & n[13] & n[12]) | (n[15] & n[14] & ~n[13] & n[12]);
-	assign seven_seg4[1] = (n[14] & n[13] & ~n[12]) | (n[15] & n[13] & n[12]) | (n[15] & n[14] & ~n[12]) | (~n[15] & n[14] & ~n[13] & n[12]);
-	assign seven_seg4[2] = (n[15] & n[14] & ~n[12]) | (n[15] & n[14] & n[13]) | (~n[15] & ~n[14] & n[13] & ~n[12]);
-	assign seven_seg4[3] = (~n[14] & ~n[13] & n[12]) | (n[14] & n[13] & n[12]) | (~n[15] & n[14] & ~n[13] & ~n[12]) | (n[15] & ~n[14] & n[13] & ~n[12]);
-	assign seven_seg4[4] = (~n[15] & n[12]) | (~n[14] & ~n[13] & n[12]) | (~n[15] & n[14] & ~n[13]);
-	assign seven_seg4[5] = (~n[15] & ~n[14] & n[12]) | (~n[15] & ~n[14] & n[13]) | (~n[15] & n[13] & n[12]) | (n[15] & n[14] & ~n[13] & n[12]);
-	assign seven_seg4[6] = (~n[15] & ~n[14] & ~n[13]) | (~n[15] & n[14] & n[13] & n[12]) | (n[15] & n[14] & ~n[13] & ~n[12]);
-	
+	logic [3:0] digit1, digit2, digit3;
+    
+    always_comb begin
+        int temp;
+        temp = n;
+        
+        digit1 = temp % 10;
+        temp = temp / 10;
+        
+        digit2 = temp % 10;
+        temp = temp / 10;
+        
+        digit3 = temp % 10;
+    end
+    
+    function logic [6:0] bcd_to_7seg(input logic [3:0] bcd);
+        case (bcd)
+            4'd0: bcd_to_7seg = 7'b1000000;
+            4'd1: bcd_to_7seg = 7'b1111001;
+            4'd2: bcd_to_7seg = 7'b0100100;
+            4'd3: bcd_to_7seg = 7'b0110000;
+            4'd4: bcd_to_7seg = 7'b0011001;
+            4'd5: bcd_to_7seg = 7'b0010010;
+            4'd6: bcd_to_7seg = 7'b0000010;
+            4'd7: bcd_to_7seg = 7'b1111000;
+            4'd8: bcd_to_7seg = 7'b0000000;
+            4'd9: bcd_to_7seg = 7'b0010000;
+            default: bcd_to_7seg = 7'b1111111;
+        endcase
+    endfunction
+    
+    assign seven_seg1 = bcd_to_7seg(digit1);
+    assign seven_seg2 = bcd_to_7seg(digit2);
+    assign seven_seg3 = bcd_to_7seg(digit3);
+    
 endmodule
