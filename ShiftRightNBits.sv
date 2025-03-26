@@ -1,4 +1,4 @@
-module ShiftRightNBits #(N=4) (
+module shiftRightNbits #(N=4) (
 
 			input logic [N-1:0] aIn,
 			input logic [N-1:0] shamt,

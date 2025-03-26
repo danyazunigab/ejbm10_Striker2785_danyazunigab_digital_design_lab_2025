@@ -65,11 +65,35 @@ module ALU #(parameter N = 4) (
 		.Y(and_result)
 	);
 	
+	n_bit_or #(.N(N)) orr (
+		.A(first_number),
+		.B(second_number),
+		.Y(or_result)
+	);
+	
+	n_bit_xor #(.N(N)) xorr (
+		.A(first_number),
+		.B(second_number),
+		.Y(xor_result)
+	);
+	
 	divider #(.N(N)) ndivider (
 		.dividend(first_number),
 		.divisor(second_number),
 		.quotient(div_result),
 		.remainder(mod_result)
+	);
+	
+	shiftRightNbits #(.N(N)) shR (
+		.aIn(first_number),
+		.shamt(second_number),
+		.bOut(shift_right)
+	);
+	
+	shiftLeftNbits #(.N(N)) shL (
+		.aIn(first_number),
+		.shamt(second_number),
+		.bOut(shift_left)
 	);
 	
 	seven_seg_decoder #(.N(N)) displays (
@@ -140,21 +164,21 @@ module ALU #(parameter N = 4) (
 					else
 						zero <= 0;
 				end
-				4'b1000: begin
+				4'b0111: begin
 					current_number <= xor_result;
 					if (xor_result == 0)
 						zero <= 1;
 					else
 						zero <= 0;
 				end
-				4'b1001: begin
+				4'b1000: begin
 					current_number <= shift_right;
 					if (shift_right == 0)
 						zero <= 1;
 					else
 						zero <= 0;
 				end
-				4'b1010: begin
+				4'b1001: begin
 					current_number <= shift_left;
 					if (shift_left == 0)
 						zero <= 1;

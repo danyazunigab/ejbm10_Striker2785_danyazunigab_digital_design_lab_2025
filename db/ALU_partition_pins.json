@@ -104,11 +104,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "mux1",
+					"name" : "mux2",
 					"strict" : false
 				},
 				{
-					"name" : "mux2",
+					"name" : "mux1",
 					"strict" : false
 				},
 				{
