@@ -65,6 +65,13 @@ module ALU #(parameter N = 4) (
 		.Y(and_result)
 	);
 	
+	divider #(.N(N)) ndivider (
+		.dividend(A),
+		.divisor(B),
+		.quotient(div_result),
+		.remainder(mod_result)
+	);
+	
 	seven_seg_decoder #(.N(N)) displays (
 		.n(current_number),
 		.seven_seg1(segs1),
