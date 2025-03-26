@@ -15,6 +15,17 @@ module ALU #(parameter N = 4) (
 	output logic [3:0] flags
 );
 	logic show;
+	
+	logic zero;
+	logic sign;
+	logic carr;
+	logic overflow;
+	
+	assign flags[3] = zero;
+	assign flags[2] = sign;
+	assign flags[1] = carr;
+	assign flags[0] = overflow;
+	
 	logic [N-1:0] first_number, second_number;
 	
 	logic [N:0] add_result;
@@ -66,6 +77,8 @@ module ALU #(parameter N = 4) (
 			first_number <= 0;
 			second_number <= 0;
 			show <= 0;
+			zero <= 0;
+			sign <= 0;
 		end
 		else if (!load1)
 			first_number <= number;
@@ -75,26 +88,72 @@ module ALU #(parameter N = 4) (
 			show <= 1;
 		else if (show) begin
 			case ({mux1, mux2, mux3, mux4})
-				4'b0000:
+				4'b0000: begin
 					current_number <= add_result;
-				4'b0001:
+					if (add_result == 0)
+						zero <= 1;
+					else
+						zero <= 0;
+				end
+				4'b0001: begin
 					current_number <= sub_result;
-				4'b0010:
+					if (sub_result == 0)
+						zero <= 1;
+					else
+						zero <= 0;
+					sign <= sub_result[N-1];
+				end
+				4'b0010: begin
 					current_number <= mul_result;
+					if (mul_result == 0)
+						zero <= 1;
+					else
+						zero <= 0;
+				end
 				4'b0011:
 					current_number <= div_result;
-				4'b0100:
+				4'b0100: begin
 					current_number <= mod_result;
-				4'b0101:
+					if (mod_result == 0)
+						zero <= 1;
+					else
+						zero <= 0;
+				end
+				4'b0101: begin
 					current_number <= and_result;
-				4'b0110:
+					if (and_result == 0)
+						zero <= 1;
+					else
+						zero <= 0;
+				end
+				4'b0110: begin
 					current_number <= or_result;
-				4'b1000:
+					if (or_result == 0)
+						zero <= 1;
+					else
+						zero <= 0;
+				end
+				4'b1000: begin
 					current_number <= xor_result;
-				4'b1001:
+					if (xor_result == 0)
+						zero <= 1;
+					else
+						zero <= 0;
+				end
+				4'b1001: begin
 					current_number <= shift_right;
-				4'b1010:
+					if (shift_right == 0)
+						zero <= 1;
+					else
+						zero <= 0;
+				end
+				4'b1010: begin
 					current_number <= shift_left;
+					if (shift_left == 0)
+						zero <= 1;
+					else
+						zero <= 0;
+				end
 			endcase
 		end
 		else

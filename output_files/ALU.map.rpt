@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Tue Mar 25 20:26:27 2025
+Tue Mar 25 23:18:13 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -66,13 +66,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Mar 25 20:26:27 2025       ;
+; Analysis & Synthesis Status     ; Successful - Tue Mar 25 23:18:13 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; ALU                                         ;
 ; Top-level Entity Name           ; ALU                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 17                                          ;
+; Total registers                 ; 19                                          ;
 ; Total pins                      ; 38                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -216,31 +216,31 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                                                                                 ;
-+---------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
-; Resource                                    ; Usage                                                                                                                         ;
-+---------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 191                                                                                                                           ;
-;                                             ;                                                                                                                               ;
-; Combinational ALUT usage for logic          ; 361                                                                                                                           ;
-;     -- 7 input functions                    ; 2                                                                                                                             ;
-;     -- 6 input functions                    ; 17                                                                                                                            ;
-;     -- 5 input functions                    ; 23                                                                                                                            ;
-;     -- 4 input functions                    ; 59                                                                                                                            ;
-;     -- <=3 input functions                  ; 260                                                                                                                           ;
-;                                             ;                                                                                                                               ;
-; Dedicated logic registers                   ; 17                                                                                                                            ;
-;                                             ;                                                                                                                               ;
-; I/O pins                                    ; 38                                                                                                                            ;
-;                                             ;                                                                                                                               ;
-; Total DSP Blocks                            ; 0                                                                                                                             ;
-;                                             ;                                                                                                                               ;
-; Maximum fan-out node                        ; seven_seg_decoder:displays|lpm_divide:Div0|lpm_divide_vno:auto_generated|abs_divider_8ag:divider|alt_u_div_0te:divider|op_7~1 ;
-; Maximum fan-out                             ; 17                                                                                                                            ;
-; Total fan-out                               ; 1231                                                                                                                          ;
-; Average fan-out                             ; 2.71                                                                                                                          ;
-+---------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimate of Logic utilization (ALMs needed) ; 209        ;
+;                                             ;            ;
+; Combinational ALUT usage for logic          ; 386        ;
+;     -- 7 input functions                    ; 0          ;
+;     -- 6 input functions                    ; 31         ;
+;     -- 5 input functions                    ; 19         ;
+;     -- 4 input functions                    ; 69         ;
+;     -- <=3 input functions                  ; 267        ;
+;                                             ;            ;
+; Dedicated logic registers                   ; 19         ;
+;                                             ;            ;
+; I/O pins                                    ; 38         ;
+;                                             ;            ;
+; Total DSP Blocks                            ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; mux4~input ;
+; Maximum fan-out                             ; 22         ;
+; Total fan-out                               ; 1344       ;
+; Average fan-out                             ; 2.79       ;
++---------------------------------------------+------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -248,24 +248,28 @@ refer to the applicable agreement for further details.
 +--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node                 ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                         ; Entity Name       ; Library Name ;
 +--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+
-; |ALU                                       ; 361 (28)            ; 17 (17)                   ; 0                 ; 0          ; 38   ; 0            ; |ALU                                                                                                                        ; ALU               ; work         ;
-;    |n_bit_adder:adder|                     ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_adder:adder                                                                                                      ; n_bit_adder       ; work         ;
+; |ALU                                       ; 386 (43)            ; 19 (19)                   ; 0                 ; 0          ; 38   ; 0            ; |ALU                                                                                                                        ; ALU               ; work         ;
+;    |n_bit_adder:adder|                     ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_adder:adder                                                                                                      ; n_bit_adder       ; work         ;
 ;       |full_adder:adder[1].u1|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_adder:adder|full_adder:adder[1].u1                                                                               ; full_adder        ; work         ;
-;       |full_adder:adder[3].u1|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_adder:adder|full_adder:adder[3].u1                                                                               ; full_adder        ; work         ;
-;    |n_bit_multiplier:multiplier|           ; 16 (2)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier                                                                                            ; n_bit_multiplier  ; work         ;
-;       |n_bit_adder:loop3[0].adder1|        ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[0].adder1                                                                ; n_bit_adder       ; work         ;
-;          |full_adder:adder[2].u1|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[0].adder1|full_adder:adder[2].u1                                         ; full_adder        ; work         ;
+;       |full_adder:adder[2].u1|             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_adder:adder|full_adder:adder[2].u1                                                                               ; full_adder        ; work         ;
+;       |full_adder:adder[3].u1|             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_adder:adder|full_adder:adder[3].u1                                                                               ; full_adder        ; work         ;
+;    |n_bit_multiplier:multiplier|           ; 21 (3)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier                                                                                            ; n_bit_multiplier  ; work         ;
+;       |n_bit_adder:loop3[0].adder1|        ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[0].adder1                                                                ; n_bit_adder       ; work         ;
+;          |full_adder:adder[1].u1|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[0].adder1|full_adder:adder[1].u1                                         ; full_adder        ; work         ;
 ;          |full_adder:adder[3].u1|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[0].adder1|full_adder:adder[3].u1                                         ; full_adder        ; work         ;
-;          |full_adder:adder[4].u1|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[0].adder1|full_adder:adder[4].u1                                         ; full_adder        ; work         ;
-;       |n_bit_adder:loop3[1].adder1|        ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[1].adder1                                                                ; n_bit_adder       ; work         ;
-;          |full_adder:adder[2].u1|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[1].adder1|full_adder:adder[2].u1                                         ; full_adder        ; work         ;
-;          |full_adder:adder[4].u1|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[1].adder1|full_adder:adder[4].u1                                         ; full_adder        ; work         ;
+;          |full_adder:adder[4].u1|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[0].adder1|full_adder:adder[4].u1                                         ; full_adder        ; work         ;
+;       |n_bit_adder:loop3[1].adder1|        ; 9 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[1].adder1                                                                ; n_bit_adder       ; work         ;
+;          |full_adder:adder[2].u1|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[1].adder1|full_adder:adder[2].u1                                         ; full_adder        ; work         ;
+;          |full_adder:adder[3].u1|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[1].adder1|full_adder:adder[3].u1                                         ; full_adder        ; work         ;
+;          |full_adder:adder[4].u1|          ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[1].adder1|full_adder:adder[4].u1                                         ; full_adder        ; work         ;
 ;          |full_adder:adder[5].u1|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[1].adder1|full_adder:adder[5].u1                                         ; full_adder        ; work         ;
-;       |n_bit_adder:loop3[2].adder1|        ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[2].adder1                                                                ; n_bit_adder       ; work         ;
-;          |full_adder:adder[3].u1|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[2].adder1|full_adder:adder[3].u1                                         ; full_adder        ; work         ;
+;       |n_bit_adder:loop3[2].adder1|        ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[2].adder1                                                                ; n_bit_adder       ; work         ;
+;          |full_adder:adder[3].u1|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[2].adder1|full_adder:adder[3].u1                                         ; full_adder        ; work         ;
+;          |full_adder:adder[4].u1|          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[2].adder1|full_adder:adder[4].u1                                         ; full_adder        ; work         ;
 ;          |full_adder:adder[5].u1|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_multiplier:multiplier|n_bit_adder:loop3[2].adder1|full_adder:adder[5].u1                                         ; full_adder        ; work         ;
-;    |n_bit_substractor:substractor|         ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_substractor:substractor                                                                                          ; n_bit_substractor ; work         ;
+;    |n_bit_substractor:substractor|         ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_substractor:substractor                                                                                          ; n_bit_substractor ; work         ;
 ;       |full_substractor:substractor[1].u1| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_substractor:substractor|full_substractor:substractor[1].u1                                                       ; full_substractor  ; work         ;
+;       |full_substractor:substractor[2].u1| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_substractor:substractor|full_substractor:substractor[2].u1                                                       ; full_substractor  ; work         ;
 ;       |full_substractor:substractor[3].u1| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|n_bit_substractor:substractor|full_substractor:substractor[3].u1                                                       ; full_substractor  ; work         ;
 ;    |seven_seg_decoder:displays|            ; 313 (21)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|seven_seg_decoder:displays                                                                                             ; seven_seg_decoder ; work         ;
 ;       |lpm_divide:Div0|                    ; 68 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|seven_seg_decoder:displays|lpm_divide:Div0                                                                             ; lpm_divide        ; work         ;
@@ -297,10 +301,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 17    ;
+; Total registers                              ; 19    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 9     ;
+; Number of registers using Asynchronous Clear ; 11    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 16    ;
 ; Number of registers using Preset             ; 0     ;
@@ -313,6 +317,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; 17:1               ; 3 bits    ; 33 LEs        ; 15 LEs               ; 18 LEs                 ; Yes        ; |ALU|current_number[7]     ;
+; 17:1               ; 3 bits    ; 33 LEs        ; 18 LEs               ; 15 LEs                 ; Yes        ; |ALU|current_number[3]     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -606,34 +611,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 17                          ;
-;     CLR               ; 1                           ;
+; arriav_ff             ; 19                          ;
+;     CLR               ; 3                           ;
 ;     ENA               ; 8                           ;
 ;     ENA CLR           ; 8                           ;
-; arriav_lcell_comb     ; 365                         ;
+; arriav_lcell_comb     ; 390                         ;
 ;     arith             ; 166                         ;
 ;         0 data inputs ; 42                          ;
 ;         1 data inputs ; 21                          ;
 ;         2 data inputs ; 14                          ;
 ;         3 data inputs ; 57                          ;
 ;         4 data inputs ; 32                          ;
-;     extend            ; 2                           ;
-;         7 data inputs ; 2                           ;
-;     normal            ; 169                         ;
+;     normal            ; 196                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 48                          ;
-;         3 data inputs ; 50                          ;
-;         4 data inputs ; 27                          ;
-;         5 data inputs ; 23                          ;
-;         6 data inputs ; 17                          ;
+;         2 data inputs ; 54                          ;
+;         3 data inputs ; 51                          ;
+;         4 data inputs ; 37                          ;
+;         5 data inputs ; 19                          ;
+;         6 data inputs ; 31                          ;
 ;     shared            ; 28                          ;
 ;         0 data inputs ; 16                          ;
 ;         1 data inputs ; 12                          ;
 ; boundary_port         ; 38                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 16.70                       ;
-; Average LUT depth     ; 12.53                       ;
+; Average LUT depth     ; 12.10                       ;
 +-----------------------+-----------------------------+
 
 
@@ -652,7 +655,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Mar 25 20:26:13 2025
+    Info: Processing started: Tue Mar 25 23:18:03 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -685,28 +688,31 @@ Info (12021): Found 1 design units, including 1 entities, in source file n_bit_a
 Info (12021): Found 1 design units, including 1 entities, in source file n_bit_multiplier.sv
     Info (12023): Found entity 1: n_bit_multiplier File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_multiplier.sv Line: 1
 Info (12127): Elaborating entity "ALU" for the top level hierarchy
-Warning (10858): Verilog HDL warning at ALU.sv(23): object div_result used but never assigned File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 23
-Warning (10858): Verilog HDL warning at ALU.sv(24): object mod_result used but never assigned File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 24
-Warning (10858): Verilog HDL warning at ALU.sv(26): object or_result used but never assigned File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 26
-Warning (10858): Verilog HDL warning at ALU.sv(27): object xor_result used but never assigned File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 27
-Warning (10858): Verilog HDL warning at ALU.sv(28): object shift_right used but never assigned File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 28
-Warning (10858): Verilog HDL warning at ALU.sv(29): object shift_left used but never assigned File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 29
-Warning (10030): Net "div_result" at ALU.sv(23) has no driver or initial value, using a default initial value '0' File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 23
-Warning (10030): Net "mod_result" at ALU.sv(24) has no driver or initial value, using a default initial value '0' File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 24
-Warning (10030): Net "or_result" at ALU.sv(26) has no driver or initial value, using a default initial value '0' File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 26
-Warning (10030): Net "xor_result" at ALU.sv(27) has no driver or initial value, using a default initial value '0' File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 27
-Warning (10030): Net "shift_right" at ALU.sv(28) has no driver or initial value, using a default initial value '0' File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 28
-Warning (10030): Net "shift_left" at ALU.sv(29) has no driver or initial value, using a default initial value '0' File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 29
-Warning (10034): Output port "flags" at ALU.sv(16) has no driver File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 16
-Info (12128): Elaborating entity "n_bit_adder" for hierarchy "n_bit_adder:adder" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 37
+Warning (10858): Verilog HDL warning at ALU.sv(21): object carr used but never assigned File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 21
+Warning (10858): Verilog HDL warning at ALU.sv(22): object overflow used but never assigned File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 22
+Warning (10858): Verilog HDL warning at ALU.sv(34): object div_result used but never assigned File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 34
+Warning (10858): Verilog HDL warning at ALU.sv(35): object mod_result used but never assigned File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 35
+Warning (10858): Verilog HDL warning at ALU.sv(37): object or_result used but never assigned File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 37
+Warning (10858): Verilog HDL warning at ALU.sv(38): object xor_result used but never assigned File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 38
+Warning (10858): Verilog HDL warning at ALU.sv(39): object shift_right used but never assigned File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 39
+Warning (10858): Verilog HDL warning at ALU.sv(40): object shift_left used but never assigned File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 40
+Warning (10030): Net "div_result" at ALU.sv(34) has no driver or initial value, using a default initial value '0' File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 34
+Warning (10030): Net "carr" at ALU.sv(21) has no driver or initial value, using a default initial value '0' File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 21
+Warning (10030): Net "overflow" at ALU.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 22
+Warning (10030): Net "mod_result.0000" at ALU.sv(35) has no driver or initial value, using a default initial value '0' File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 35
+Warning (10030): Net "or_result.0000" at ALU.sv(37) has no driver or initial value, using a default initial value '0' File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 37
+Warning (10030): Net "xor_result.0000" at ALU.sv(38) has no driver or initial value, using a default initial value '0' File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 38
+Warning (10030): Net "shift_right.0000" at ALU.sv(39) has no driver or initial value, using a default initial value '0' File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 39
+Warning (10030): Net "shift_left.0000" at ALU.sv(40) has no driver or initial value, using a default initial value '0' File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 40
+Info (12128): Elaborating entity "n_bit_adder" for hierarchy "n_bit_adder:adder" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 48
 Info (12128): Elaborating entity "full_adder" for hierarchy "n_bit_adder:adder|full_adder:adder[0].u1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_adder.sv Line: 19
-Info (12128): Elaborating entity "n_bit_substractor" for hierarchy "n_bit_substractor:substractor" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 43
+Info (12128): Elaborating entity "n_bit_substractor" for hierarchy "n_bit_substractor:substractor" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 54
 Info (12128): Elaborating entity "full_substractor" for hierarchy "n_bit_substractor:substractor|full_substractor:substractor[0].u1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_substractor.sv Line: 19
 Warning (10036): Verilog HDL or VHDL warning at full_substractor.sv(11): object "negB" assigned a value but never read File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/full_substractor.sv Line: 11
-Info (12128): Elaborating entity "n_bit_multiplier" for hierarchy "n_bit_multiplier:multiplier" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 49
+Info (12128): Elaborating entity "n_bit_multiplier" for hierarchy "n_bit_multiplier:multiplier" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 60
 Info (12128): Elaborating entity "n_bit_adder" for hierarchy "n_bit_multiplier:multiplier|n_bit_adder:loop3[0].adder1" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_multiplier.sv Line: 29
-Info (12128): Elaborating entity "n_bit_and" for hierarchy "n_bit_and:andd" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 55
-Info (12128): Elaborating entity "seven_seg_decoder" for hierarchy "seven_seg_decoder:displays" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 62
+Info (12128): Elaborating entity "n_bit_and" for hierarchy "n_bit_and:andd" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 66
+Info (12128): Elaborating entity "seven_seg_decoder" for hierarchy "seven_seg_decoder:displays" File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 73
 Warning (10230): Verilog HDL assignment warning at seven_seg_decoder.sv(14): truncated value with size 32 to match size of target (4) File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/seven_seg_decoder.sv Line: 14
 Warning (10230): Verilog HDL assignment warning at seven_seg_decoder.sv(17): truncated value with size 32 to match size of target (4) File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/seven_seg_decoder.sv Line: 17
 Warning (10230): Verilog HDL assignment warning at seven_seg_decoder.sv(20): truncated value with size 32 to match size of target (4) File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/seven_seg_decoder.sv Line: 20
@@ -760,21 +766,19 @@ Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "flags[0]" is stuck at GND File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 16
     Warning (13410): Pin "flags[1]" is stuck at GND File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 16
-    Warning (13410): Pin "flags[2]" is stuck at GND File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 16
-    Warning (13410): Pin "flags[3]" is stuck at GND File: C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv Line: 16
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/output_files/ALU.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 407 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 432 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 25 output pins
-    Info (21061): Implemented 369 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
-    Info: Peak virtual memory: 4842 megabytes
-    Info: Processing ended: Tue Mar 25 20:26:27 2025
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:29
+    Info (21061): Implemented 394 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 4839 megabytes
+    Info: Processing ended: Tue Mar 25 23:18:13 2025
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:20
 
 
 +------------------------------------------+
