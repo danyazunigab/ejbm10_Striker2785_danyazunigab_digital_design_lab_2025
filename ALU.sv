@@ -66,8 +66,8 @@ module ALU #(parameter N = 4) (
 	);
 	
 	divider #(.N(N)) ndivider (
-		.dividend(A),
-		.divisor(B),
+		.dividend(first_number),
+		.divisor(second_number),
 		.quotient(div_result),
 		.remainder(mod_result)
 	);
