@@ -10,30 +10,81 @@ cModel Technology
 Z0 dC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/simulation/modelsim
 vALU
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1742757674
+Z2 !s110 1743137785
 !i10b 1
-!s100 JTbN?S2O=PCGbUUR5mz9:1
-IRN0DQ=NgAA78O6=QP[ePH1
+!s100 Jz1jc@R8<P4BFLgK@IC_^2
+ILU95M:6MJhe9D>X1h_e8K0
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 ALU_sv_unit
 S1
 R0
-w1742757631
+Z4 w1743136298
 8C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv
 FC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv
 L0 1
-Z4 OV;L;10.5b;63
+Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1742757674.000000
+Z6 !s108 1743137785.000000
 !s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU.sv|
 !i113 1
-Z6 o-sv -work work
-Z7 !s92 -sv -work work +incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025
-Z8 tCvgOpt 0
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025
+Z9 tCvgOpt 0
 n@a@l@u
+vALU_tb
+R1
+Z10 !s110 1743137786
+!i10b 1
+!s100 9]8E]1[JL0M9f4eRb44PV3
+I3CN0eJaJLUL]l:[S?M];@3
+R3
+!s105 ALU_tb_sv_unit
+S1
+R0
+w1743137755
+8C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU_tb.sv
+FC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU_tb.sv
+L0 1
+R5
+r1
+!s85 0
+31
+Z11 !s108 1743137786.000000
+!s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ALU_tb.sv|
+!i113 1
+R7
+R8
+R9
+n@a@l@u_tb
+vdivider
+R1
+R2
+!i10b 1
+!s100 f6B]I7GNN6aYS`;;MN<NO3
+INcEJY4^`gj8QQ58h54dPQ1
+R3
+!s105 n_bit_division_sv_unit
+S1
+R0
+R4
+8C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_division.sv
+FC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_division.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_division.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_division.sv|
+!i113 1
+R7
+R8
+R9
 vfull_adder
 R1
 R2
@@ -44,21 +95,21 @@ R3
 !s105 full_adder_sv_unit
 S1
 R0
-Z9 w1742577988
+R4
 8C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/full_adder.sv
 FC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/full_adder.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/full_adder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/full_adder.sv|
 !i113 1
-R6
 R7
 R8
+R9
 vfull_substractor
 R1
 R2
@@ -69,21 +120,21 @@ R3
 !s105 full_substractor_sv_unit
 S1
 R0
-R9
+R4
 8C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/full_substractor.sv
 FC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/full_substractor.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/full_substractor.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/full_substractor.sv|
 !i113 1
-R6
 R7
 R8
+R9
 vn_bit_adder
 R1
 R2
@@ -94,24 +145,24 @@ R3
 !s105 n_bit_adder_sv_unit
 S1
 R0
-w1742769141
+R4
 8C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_adder.sv
 FC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_adder.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_adder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_adder.sv|
 !i113 1
-R6
 R7
 R8
+R9
 vn_bit_and
 R1
-Z10 !s110 1742757675
+R2
 !i10b 1
 !s100 Ia^DcQ?:BGVSDmg>HEz>^2
 IA<hciHKN:gFWD50]UF30z2
@@ -119,24 +170,24 @@ R3
 !s105 n_bit_and_sv_unit
 S1
 R0
-w1742769023
+R4
 8C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_and.sv
 FC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_and.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-Z11 !s108 1742757675.000000
+R6
 !s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_and.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_and.sv|
 !i113 1
-R6
 R7
 R8
+R9
 vn_bit_multiplier
 R1
-R10
+R2
 !i10b 1
 !s100 ZNLl]O;LHIVAcM^odgd>13
 Ioo?n;zBU3]X3[N=P;_m<]2
@@ -144,21 +195,46 @@ R3
 !s105 n_bit_multiplier_sv_unit
 S1
 R0
-w1742772496
+R4
 8C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_multiplier.sv
 FC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_multiplier.sv
 L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_multiplier.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_multiplier.sv|
+!i113 1
+R7
+R8
+R9
+vn_bit_or
+R1
+R10
+!i10b 1
+!s100 9m[6`6=Gl2<d;]N3G<H@C2
+IJ6jzCBR=@c0QjhXOVoU`10
+R3
+!s105 n_bit_or_sv_unit
+S1
+R0
 R4
+8C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_or.sv
+FC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_or.sv
+L0 1
+R5
 r1
 !s85 0
 31
 R11
-!s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_multiplier.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_multiplier.sv|
+!s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_or.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_or.sv|
 !i113 1
-R6
 R7
 R8
+R9
 vn_bit_substractor
 R1
 R2
@@ -169,68 +245,145 @@ R3
 !s105 n_bit_substractor_sv_unit
 S1
 R0
-w1742769135
+R4
 8C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_substractor.sv
 FC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_substractor.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_substractor.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_substractor.sv|
 !i113 1
-R6
 R7
 R8
-vseven_seg_decoder
+R9
+vn_bit_xor
 R1
 R10
 !i10b 1
-!s100 JUbXHX>DHOWLZ=z6cS]_H0
-I26Kkj]I9h=k^[hM]569iW2
+!s100 gB<ljQJzI^fDgHQWP@:j60
+IEa1ChA6;[8KoVYO[SlDQd2
+R3
+!s105 n_bit_xor_sv_unit
+S1
+R0
+R4
+8C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_xor.sv
+FC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_xor.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_xor.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/n_bit_xor.sv|
+!i113 1
+R7
+R8
+R9
+vseven_seg_decoder
+R1
+R2
+!i10b 1
+!s100 >P`OQZWY90NXEIYhCT3H]3
+I5hWI7mIJ0ZMN0N7XnBE>n2
 R3
 !s105 seven_seg_decoder_sv_unit
 S1
 R0
-w1742754623
+R4
 8C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/seven_seg_decoder.sv
 FC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/seven_seg_decoder.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R11
+R6
 !s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/seven_seg_decoder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/seven_seg_decoder.sv|
 !i113 1
-R6
 R7
 R8
-vtb
+R9
+vshift1bit
 R1
-R10
+R2
 !i10b 1
-!s100 Z4S[oFL7?RNDk64^LO^gl0
-IcREJWX:7W6D=^^WV>28<90
+!s100 lzLeOYeL^Cj=W5PG7jc1m2
+In4zAnRInQiejn7Zk2ZWZL2
 R3
-!s105 tb_sv_unit
+!s105 Shift1Bit_sv_unit
 S1
 R0
-w1742757074
-8C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/tb.sv
-FC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/tb.sv
-L0 1
 R4
+8C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Shift1Bit.sv
+FC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Shift1Bit.sv
+L0 1
+R5
 r1
 !s85 0
 31
-R11
-!s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/tb.sv|
-!i113 1
 R6
+!s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Shift1Bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/Shift1Bit.sv|
+!i113 1
 R7
 R8
+R9
+vshiftLeftNbits
+R1
+Z12 !s110 1743137784
+!i10b 1
+!s100 2>6[;Hzlzd^C`06ZPD?Z33
+I_To:RahCkEm`PN>o177RB1
+R3
+!s105 ShiftLeftNBits_sv_unit
+S1
+R0
+R4
+8C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ShiftLeftNBits.sv
+FC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ShiftLeftNBits.sv
+L0 1
+R5
+r1
+!s85 0
+31
+Z13 !s108 1743137784.000000
+!s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ShiftLeftNBits.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ShiftLeftNBits.sv|
+!i113 1
+R7
+R8
+R9
+nshift@left@nbits
+vshiftRightNbits
+R1
+R12
+!i10b 1
+!s100 `HHW?;2^BUYLaP?DN4=Rg2
+IczhIH_4W<>]a4U2iVkUma1
+R3
+!s105 ShiftRightNBits_sv_unit
+S1
+R0
+R4
+8C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ShiftRightNBits.sv
+FC:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ShiftRightNBits.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ShiftRightNBits.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025|C:/Users/eboli/Documents/Github/ejbm10_Striker2785_danyazunigab_digital_design_lab_2025/ShiftRightNBits.sv|
+!i113 1
+R7
+R8
+R9
+nshift@right@nbits
